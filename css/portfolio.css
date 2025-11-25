@@ -1,0 +1,555 @@
+/* Custom Properties & Reset */
+:root {
+    --color-dark-main: #0c1815; /* A deep, dark green/black */
+    --color-dark-accent: #111a18; /* Slightly lighter for contrast */
+    --color-green-primary: #85ff21; /* The vibrant lime green */
+    --color-text-light: #f0f0f0;
+    --color-text-secondary: #a9a9a9;
+    --color-white: #ffffff;
+    --font-header: 'Arial Black', sans-serif;
+    --font-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-dark-main); /* Default text color for light sections */
+    background-color: var(--color-white);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    color: var(--color-green-primary);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--color-dark-main);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- Utility Classes --- */
+.green-text {
+    color: var(--color-green-primary);
+}
+
+.dark-text {
+    color: var(--color-dark-main);
+}
+
+.light-text {
+    color: var(--color-text-light);
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--color-green-primary);
+    color: var(--color-dark-main);
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #a3ff52;
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid var(--color-green-primary);
+    color: var(--color-green-primary);
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-green-primary);
+    color: var(--color-dark-main);
+}
+
+.btn-tertiary {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--color-dark-main); /* Or dark-accent for contrast */
+    color: var(--color-green-primary);
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-tertiary:hover {
+    background-color: var(--color-green-primary);
+    color: var(--color-dark-main);
+}
+
+.section-title {
+    font-family: var(--font-header);
+    font-size: 40px;
+    margin-bottom: 5px;
+    color: var(--color-dark-main);
+    text-transform: uppercase;
+    text-align: center;
+}
+.section-title.light-text {
+    color: var(--color-text-light);
+}
+
+.section-subtitle {
+    color: var(--color-green-primary);
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.section-subtitle.light-text {
+    color: var(--color-text-light);
+}
+
+/* --- Header & Navigation (reused) --- */
+.main-header {
+    background-color: var(--color-dark-accent);
+    padding: 15px 0;
+    border-bottom: 2px solid var(--color-green-primary);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-header);
+    font-size: 24px;
+    color: var(--color-green-primary);
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 25px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.main-nav a {
+    color: var(--color-text-light);
+}
+.main-nav a:hover, .main-nav a.active {
+    color: var(--color-green-primary);
+}
+
+/* --- Portfolio Hero Section --- */
+.portfolio-hero-section {
+    position: relative;
+    background-image: url('https://images.unsplash.com/photo-1517048676732-d65bc9c5542c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80'); /* Google Unsplash image */
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    text-align: center;
+    color: var(--color-white);
+}
+
+.portfolio-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    z-index: 1;
+}
+
+.portfolio-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.portfolio-hero-content .hero-subtitle {
+    font-family: var(--font-header);
+    font-size: 24px;
+    color: var(--color-green-primary);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.portfolio-hero-content h1 {
+    font-family: var(--font-header);
+    font-size: 60px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+.portfolio-hero-content .hero-description {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.portfolio-hero-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.btn-portfolio-hero {
+    padding: 15px 30px;
+    font-size: 16px;
+}
+
+/* --- Partner Section (reused from About page) --- */
+.about-partners-section {
+    background-color: var(--color-dark-main);
+    padding: 30px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.about-partners-logos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--color-text-secondary);
+    font-size: 12px;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.about-partners-logos .fas {
+    display: block;
+    font-size: 28px;
+    margin-bottom: 5px;
+    color: var(--color-green-primary);
+}
+
+/* --- Portfolio Content Section --- */
+.portfolio-content-section {
+    padding: 80px 0;
+    background-color: var(--color-white);
+}
+
+.portfolio-content-section .section-title {
+    margin-bottom: 40px;
+    line-height: 1.2;
+}
+
+.portfolio-filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background-color: var(--color-dark-accent);
+    color: var(--color-text-secondary);
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.filter-btn:hover {
+    background-color: var(--color-dark-main);
+    color: var(--color-green-primary);
+}
+
+.filter-btn.active {
+    background-color: var(--color-green-primary);
+    color: var(--color-dark-main);
+    font-weight: bold;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 250px; /* Fixed height for consistent grid */
+    object-fit: cover;
+    transition: transform 0.4s ease-in-out;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.05);
+}
+
+.item-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    color: var(--color-white);
+    padding: 20px;
+    transform: translateY(100%);
+    transition: transform 0.4s ease-in-out;
+}
+
+.portfolio-item:hover .item-overlay {
+    transform: translateY(0);
+}
+
+.item-overlay h3 {
+    font-family: var(--font-header);
+    font-size: 20px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    color: var(--color-green-primary);
+}
+
+.item-overlay p {
+    font-size: 14px;
+    color: var(--color-text-light);
+}
+
+/* --- Transform Vision Section (CTA banner) --- */
+.transform-vision-section {
+    background-color: var(--color-green-primary);
+    padding: 30px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 80px; /* Space from portfolio grid */
+}
+
+.transform-vision-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+    z-index: 2;
+    flex-wrap: wrap;
+}
+
+.transform-vision-content p {
+    font-family: var(--font-header);
+    font-size: 28px;
+    color: var(--color-dark-main);
+    margin: 0;
+    line-height: 1.2;
+}
+
+.transform-vision-graphic {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-10deg);
+    width: 200px; /* Adjust size */
+    opacity: 0.7;
+    z-index: 1;
+}
+
+/* --- Scroll Away Section (Contact Form - reused) --- */
+.scroll-away-section {
+    background: linear-gradient(180deg, var(--color-dark-accent), var(--color-dark-main));
+    padding: 80px 0;
+    border-top: 5px solid var(--color-green-primary);
+    color: var(--color-text-light); /* Ensure text is visible */
+}
+
+.scroll-content {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.left-text {
+    flex: 1;
+}
+
+.left-text h2 {
+    font-family: var(--font-header);
+    font-size: 45px;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: var(--color-text-light);
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    color: var(--color-text-secondary);
+}
+
+.contact-info .fas {
+    margin-right: 10px;
+}
+
+.right-form {
+    flex: 1;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.contact-form input, .contact-form textarea, .contact-form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid var(--color-text-secondary);
+    background-color: var(--color-dark-main);
+    color: var(--color-text-light);
+    border-radius: 4px;
+    appearance: none; /* Remove default select arrow */
+}
+
+.contact-form select {
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%2385ff21%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13%205.4L146.2%20205.7%2018.8%2074.8c-2.6-2.6-6.1-4-9.7-4s-7.1%201.4-9.7%204c-5.2%205.2-5.2%2013.8%200%2019l127.9%20127.9c5.2%205.2%2013.8%205.2%2019%200l127.9-127.9c5.2-5.2%205.2-13.8%200-19-2.6-2.6-6.1-4-9.7-4z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    padding-right: 30px; /* Make space for the custom arrow */
+}
+
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row input, .form-row select {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.btn-form-submit {
+    display: block;
+    width: 50%;
+    padding: 12px 20px;
+    background-color: var(--color-green-primary);
+    color: var(--color-dark-main);
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 15px;
+    transition: opacity 0.3s;
+}
+
+.btn-form-submit:hover {
+    opacity: 0.9;
+}
+
+/* --- Footer (reused) --- */
+.main-footer {
+    padding: 60px 0 20px;
+    background-color: var(--color-dark-main);
+    color: var(--color-text-light);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-left {
+    flex: 1;
+}
+
+.footer-left h2 {
+    font-family: var(--font-header);
+    font-size: 30px;
+    line-height: 1;
+    color: var(--color-green-primary);
+    margin-bottom: 15px;
+}
+
+.footer-left p {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+}
+
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: var(--color-text-secondary);
+    font-size: 20px;
+}
+
+.social-icons a:hover {
+    color: var(--color-green-primary);
+}
+
+
+.footer-center {
+    flex: 2;
+}
+
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.footer-links-grid h4 {
+    color: var(--color-text-light);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.footer-links-grid li a {
+}

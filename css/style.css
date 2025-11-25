@@ -1,0 +1,991 @@
+/* --- Custom Properties & Reset --- */
+:root {
+    --color-dark-main: #0c1815; /* A deep, dark green/black */
+    --color-dark-accent: #111a18; /* Slightly lighter for contrast */
+    --color-green-primary: #85ff21; /* The vibrant lime green */
+    --color-text-light: #f0f0f0;
+    --color-text-secondary: #a9a9a9;
+    --color-white: #ffffff;
+    --font-header: 'Arial Black', sans-serif;
+    --font-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-dark-main);
+    background-color: var(--color-white);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    color: var(--color-green-primary);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- Utility Classes & Buttons --- */
+.green-text {
+    color: var(--color-green-primary);
+}
+
+.light-text {
+    color: var(--color-text-light);
+}
+
+.section-title {
+    font-family: var(--font-header);
+    font-size: 40px;
+    margin-bottom: 5px;
+    color: var(--color-dark-main);
+    text-transform: uppercase;
+    text-align: center;
+}
+.section-title.light-text {
+    color: var(--color-text-light);
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--color-green-primary);
+    color: var(--color-dark-main);
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #a3ff52;
+}
+
+/* --- Header & Navigation --- */
+.main-header {
+    background-color: var(--color-dark-accent);
+    padding: 15px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-header);
+    font-size: 24px;
+    color: var(--color-green-primary);
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 25px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.main-nav a {
+    color: var(--color-text-light);
+    padding: 5px 0;
+    display: block;
+}
+.main-nav a:hover, .main-nav a.active {
+    color: var(--color-green-primary);
+}
+
+/* --- Dropdown Styling --- */
+.main-nav .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: var(--color-dark-main); 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    min-width: 240px;
+    z-index: 1000;
+    border-top: 2px solid var(--color-green-primary);
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.dropdown-content a {
+    color: var(--color-text-light);
+    padding: 12px 20px;
+    display: block;
+    text-align: left;
+    white-space: nowrap; 
+    font-size: 14px;
+    text-transform: capitalize; 
+}
+
+.dropdown-content a:hover {
+    background-color: var(--color-dark-accent); 
+    color: var(--color-green-primary);
+}
+
+.main-nav .dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* --- Home Hero Section --- */
+.home-hero-section {
+    background-color: var(--color-dark-main);
+    background-image: linear-gradient(rgba(12, 24, 21, 0.8), rgba(12, 24, 21, 0.8)), url('https://via.placeholder.com/1600x600?text=Dubai+City+Background');
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0;
+    text-align: center;
+    color: var(--color-white);
+}
+
+.hero-content h1 {
+    font-family: var(--font-header);
+    font-size: 55px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+.hero-content h1 .green-text {
+    /* Style for the 'DIGITAL MARKETING' part of the title */
+    color: var(--color-green-primary);
+}
+
+.hero-content .hero-subtitle {
+    font-size: 18px;
+    color: var(--color-text-secondary);
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-hero-start {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--color-green-primary);
+    color: var(--color-dark-main);
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* --- Partner Strip Section --- */
+.partner-strip-section {
+    background-color: var(--color-dark-accent);
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.partner-logos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px 0;
+}
+.partner-logos span {
+    text-transform: uppercase;
+    white-space: nowrap;
+    opacity: 0.7;
+}
+
+/* --- Services Grid Section (How We Help) --- */
+.services-grid-section {
+    background-color: var(--color-dark-main);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.services-grid-section .section-subtitle {
+    font-size: 14px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-item {
+    background-color: var(--color-dark-accent);
+    padding: 30px 20px;
+    border-radius: 8px;
+    text-align: left;
+    border-left: 3px solid transparent;
+    transition: border-left 0.3s;
+}
+
+.service-item:hover {
+    border-left: 3px solid var(--color-green-primary);
+}
+
+.service-item h3 {
+    color: var(--color-green-primary);
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.service-item p {
+    color: var(--color-text-secondary);
+    font-size: 14px;
+}
+
+/* --- Performance CTA Section --- */
+.performance-cta-section {
+    background-color: var(--color-white);
+    padding: 60px 0;
+}
+
+.performance-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.left-gallery {
+    flex: 1;
+    /* Placeholder styles */
+    height: 350px; 
+    background-color: #e0e0e0;
+}
+
+.right-text {
+    flex: 1;
+    text-align: left;
+}
+
+.right-text h2 {
+    font-family: var(--font-header);
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.right-text p {
+    color: var(--color-dark-main);
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+/* --- Guaranteed Performance Banner --- */
+.guaranteed-performance-banner {
+    background-color: var(--color-green-primary);
+    padding: 40px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.guaranteed-performance-banner .banner-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-dark-main);
+}
+
+.guaranteed-performance-banner h2 {
+    font-family: var(--font-header);
+    font-size: 30px;
+    line-height: 1.1;
+}
+
+.guaranteed-performance-banner p {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* --- Partner Synergy Section --- */
+.partner-synergy-section {
+    background-color: var(--color-dark-main);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.synergy-content h3 {
+    color: var(--color-text-light);
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.synergy-logos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.logo-box {
+    color: var(--color-green-primary);
+    border: 1px solid var(--color-green-primary);
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.synergy-content p {
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* --- Success Stories Section --- */
+.success-stories-section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: var(--color-white);
+}
+
+.success-stories-section .section-title {
+    margin-bottom: 40px;
+}
+
+.success-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.story-card {
+    width: 300px;
+    background-color: var(--color-dark-main);
+    color: var(--color-text-light);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.story-card img {
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.story-card h4 {
+    padding: 15px;
+    font-size: 16px;
+    line-height: 1.3;
+    color: var(--color-green-primary);
+}
+
+/* --- Our Process Section --- */
+.process-section {
+    background-color: var(--color-white);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.process-title {
+    margin-bottom: 60px;
+}
+
+.process-steps {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+.process-steps .step-line {
+    position: absolute;
+    top: 55px;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background-color: var(--color-green-primary);
+    z-index: 1;
+}
+
+.process-step {
+    position: relative;
+    width: 18%; 
+    z-index: 2;
+}
+
+.step-icon {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background-color: var(--color-green-primary);
+    color: var(--color-dark-main);
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0 auto 15px;
+    border: 3px solid var(--color-white);
+    box-shadow: 0 0 0 5px var(--color-dark-main);
+}
+
+.process-step h4 {
+    color: var(--color-dark-main);
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.process-step p {
+    font-size: 13px;
+    color: #555;
+}
+
+/* --- Green CTA Main (Powerhouse) --- */
+.green-cta-main {
+    background-color: var(--color-green-primary);
+    padding: 40px 0;
+    overflow: hidden;
+    position: relative;
+    margin-top: 50px;
+}
+
+.cta-content-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-dark-main);
+    position: relative;
+    z-index: 2;
+}
+
+.cta-content-main h3 {
+    font-family: var(--font-header);
+    font-size: 28px;
+    max-width: 60%;
+}
+
+.cta-graphic {
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 300px;
+    height: 300px;
+    z-index: 1;
+}
+
+/* --- Testimonials Section --- */
+.testimonials-section {
+    background-color: var(--color-dark-main);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.testimonials-section .section-subtitle {
+    font-size: 16px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.testimonial-card {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid var(--color-green-primary);
+    border-radius: 8px;
+    background-color: var(--color-dark-accent);
+}
+
+.testimonial-card blockquote {
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 15px;
+    color: var(--color-text-light);
+    line-height: 1.5;
+}
+
+.client-name {
+    font-weight: bold;
+    font-size: 16px;
+    display: block;
+    margin-top: 10px;
+}
+.client-title {
+    font-size: 14px;
+}
+
+.slider-dots {
+    margin-top: 20px;
+}
+
+.dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-text-secondary);
+    border-radius: 50%;
+    margin: 0 4px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: var(--color-green-primary);
+    width: 10px;
+    height: 10px;
+}
+
+/* --- Industries We Serve Section --- */
+.industries-section {
+    padding: 80px 0;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.industry-intro {
+    max-width: 900px;
+    margin: 20px auto 40px;
+    font-size: 15px;
+    color: #555;
+}
+
+.industries-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 40px;
+}
+
+.tab-item {
+    padding: 15px 20px;
+    color: var(--color-dark-main);
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.tab-item i {
+    margin-right: 5px;
+}
+
+.tab-item:hover, .tab-item.active {
+    border-bottom: 2px solid var(--color-green-primary);
+    color: var(--color-green-primary);
+}
+
+.industry-content-preview {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.industry-content-preview .text-content {
+    flex: 1;
+}
+
+.industry-content-preview .image-content {
+    flex: 1;
+}
+
+.industry-content-preview img {
+    border-radius: 8px;
+}
+
+/* --- Digital Success Story FAQ (Accordion) --- */
+.success-story-faq {
+    padding: 80px 0;
+    background-color: var(--color-white);
+    text-align: center;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 40px;
+    margin-top: 40px;
+}
+
+.faq-item {
+    text-align: left;
+}
+
+.faq-item input[type="checkbox"] {
+    display: none;
+}
+
+.faq-item label {
+    display: block;
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--color-dark-main);
+    position: relative;
+    transition: background-color 0.2s;
+}
+
+.faq-item label::after {
+    content: '+';
+    position: absolute;
+    right: 15px;
+    font-size: 20px;
+    color: var(--color-green-primary);
+    line-height: 1;
+}
+
+.faq-item input[type="checkbox"]:checked + label::after {
+    content: '-';
+}
+
+.faq-item input[type="checkbox"]:checked + label {
+    background-color: #f0f0f0;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 15px;
+    background-color: #f9f9f9;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+.faq-item input[type="checkbox"]:checked ~ .faq-answer {
+    max-height: 100px; 
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+}
+
+/* --- CTA Banner Section ("Be Our Success Story") --- */
+.cta-banner-section {
+    background-color: var(--color-green-primary);
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+.cta-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-dark-main);
+}
+
+.cta-content p {
+    font-family: var(--font-header);
+    font-size: 20px;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.cta-content small {
+    font-size: 14px;
+    color: rgba(12, 24, 21, 0.8);
+}
+
+.btn-cta-consultation {
+    padding: 10px 20px;
+    background-color: var(--color-dark-main);
+    color: var(--color-green-primary);
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: opacity 0.3s;
+}
+
+.btn-cta-consultation:hover {
+    opacity: 0.9;
+}
+
+
+/* --- Scroll Away Section (Dark Contact Form) --- */
+.scroll-away-section {
+    background: linear-gradient(180deg, var(--color-dark-accent), var(--color-dark-main));
+    padding: 80px 0;
+    border-top: 5px solid var(--color-green-primary);
+    color: var(--color-text-light);
+}
+
+.scroll-content {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.left-text {
+    flex: 1;
+}
+
+.left-text h2 {
+    font-family: var(--font-header);
+    font-size: 45px;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: var(--color-text-light);
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    color: var(--color-text-secondary);
+}
+
+.contact-info .fas {
+    margin-right: 10px;
+}
+
+.right-form {
+    flex: 1;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    border: 2px solid var(--color-green-primary);
+}
+
+.contact-form input, .contact-form textarea, .contact-form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid var(--color-text-secondary);
+    background-color: var(--color-dark-main);
+    color: var(--color-text-light);
+    border-radius: 4px;
+    appearance: none;
+}
+
+.contact-form select {
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%2385ff21%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13%205.4L146.2%20205.7%2018.8%2074.8c-2.6-2.6-6.1-4-9.7-4s-7.1%201.4-9.7%204c-5.2%205.2-5.2%2013.8%200%2019l127.9%20127.9c5.2%205.2%2013.8%205.2%2019%200l127.9-127.9c5.2-5.2%205.2-13.8%200-19-2.6-2.6-6.1-4-9.7-4z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    padding-right: 30px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row input, .form-row select {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.btn-form-submit {
+    display: block;
+    width: 50%;
+    padding: 12px 20px;
+    background-color: var(--color-green-primary);
+    color: var(--color-dark-main);
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 15px;
+    transition: opacity 0.3s;
+}
+
+.btn-form-submit:hover {
+    opacity: 0.9;
+}
+
+/* --- Footer --- */
+.main-footer {
+    padding: 60px 0 20px;
+    background-color: var(--color-dark-main);
+    color: var(--color-text-light);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-left {
+    width: 20%;
+}
+
+.footer-logo-box {
+    background-color: var(--color-green-primary);
+    padding: 20px;
+    color: var(--color-dark-main);
+    border-radius: 8px;
+}
+
+.footer-left h2 {
+    font-family: var(--font-header);
+    font-size: 24px;
+    line-height: 1;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.footer-left p {
+    font-size: 14px;
+    color: var(--color-dark-main);
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: var(--color-text-secondary);
+    font-size: 20px;
+}
+
+.social-icons a:hover {
+    color: var(--color-green-primary);
+}
+
+
+.footer-center {
+    width: 80%;
+}
+
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.footer-links-grid h4 {
+    color: var(--color-text-light);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.footer-links-grid li a {
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.google-review-badge {
+    margin-bottom: 10px;
+}
+
+.partner-logo-large {
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px solid var(--color-green-primary);
+    color: var(--color-green-primary);
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    padding-top: 20px;
+}
+
+/* --- Media Queries --- */
+@media (max-width: 1024px) {
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .process-steps {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .process-step {
+        width: 45%;
+        margin-bottom: 30px;
+    }
+    .process-steps .step-line {
+        display: none;
+    }
+    .footer-content {
+        flex-direction: column;
+    }
+    .footer-left, .footer-center {
+        width: 100%;
+        text-align: center;
+    }
+    .footer-logo-box {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-hero-section {
+        padding: 60px 0;
+    }
+    .hero-content h1 {
+        font-size: 40px;
+    }
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+    .performance-content {
+        flex-direction: column;
+    }
+    .right-text {
+        text-align: center;
+    }
+    .scroll-content {
+        flex-direction: column;
+    }
+    .footer-links-grid {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+}
