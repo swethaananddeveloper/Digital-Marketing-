@@ -4,29 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Design & Development Services in Dubai - XDIGITAL</title>
-        <link rel="stylesheet" href="./css/webdesign.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="./css/style.css">        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
+<!----Header & Navigation starts here-->
     <header class="main-header">
         <div class="container header-content">
             <div class="logo">XDIGITAL</div>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="indexs.html" class="active">HOME</a></li>
                     <li><a href="about.html">ABOUT</a></li>
                     
                     <li class="dropdown">
-                        <a href="#services-section" class="active">SERVICES <i class="fas fa-caret-down"></i></a>
+                        <a href="#services-section">SERVICES</a>
                         <ul class="dropdown-content">
-                            <li><a href="services/seo-dubai.html">SEO Dubai</a></li>
-                            <li><a href="services/seo-abudhabi.html">SEO Abu Dhabi</a></li>
-                            <li><a href="services/google-ads.html">Google Ads (PPC)</a></li>
-                            <li><a href="services/social-media.html">Social Media Marketing</a></li>
-                            <li><a href="services/website-maintenance.html">Website Maintenance</a></li>
-                            <li><a href="services/web-design-dubai.html" class="active-dropdown-item">Website Development</a></li>
+                            <!---<li><a href="services/seo-dubai.html">SEO Dubai</a></li>
+                            <li><a href="services/seo-abudhabi.html">SEO Abu Dhabi</a></li> --->
+                            <li><a href="pcc.html">Google Ads (PPC)</a></li>
+                            <li><a href="socialmedia.html">Social Media Marketing</a></li>
+                           <li><a href="seo.html">Website Maintenance</a></li>
+                            <li><a href="webdesign.html">Website Development</a></li>
                         </ul>
                     </li>
                     
@@ -35,34 +34,38 @@
                     <li><a href="contact.html">CONTACT</a></li>
                 </ul>
             </nav>
-            <a href="#" class="btn-primary">Let's Talk</a>
+            <a href="contact.html" class="btn-primary">Let's Talk</a>
         </div>
     </header>
-
-    <section class="service-hero-section web-design-hero">
+<!---Header & Navigation ends here --->
+<!--- Hero Section starts here --->
+    <section class="web-hero-section web-design-hero">
         <div class="container hero-content">
             <h1>TRAILBLAZERS IN WEBSITE DESIGN & DEVELOPMENT IN DUBAI</h1>
-            <p class="hero-subtitle light-text">Custom Web Design Solutions | Content Management System Websites</p>
+            <p class="webhero-subtitle light-text">Custom Web Design Solutions | Content Management System Websites</p>
             <div class="tech-logos">
                 <i class="fab fa-wordpress fa-2x"></i>
-                <i class="fab fa-wordpress fa-2x"></i> <i class="fab fa-shopify fa-2x"></i>
+                <i class="fab fa-wordpress fa-2x"></i> 
+                <i class="fab fa-shopify fa-2x"></i>
                 <i class="fab fa-squarespace fa-2x"></i>
                 <i class="fas fa-database fa-2x"></i> </div>
         </div>
     </section>
-
+<!--- Hero Section ends here --->
+<!--- Main Content starts here --->
     <section class="ready-to-start-banner green-bg-section">
         <div class="container banner-content">
             <p class="ready-text">READY TO START?</p>
             <small>TAKE YOUR BUSINESS TO A NEW LEVEL WITH 10X DIGITAL</small>
             <div class="cta-buttons">
-                <button class="btn-secondary">TALK TO OUR EXPERT!</button>
-                <button class="btn-primary-dark">FREE WEBSITE AUDIT</button>
+                <button class="btn-ready">TALK TO OUR EXPERT!</button>
+                <button class="btn-ready">FREE WEBSITE AUDIT</button>
             </div>
         </div>
     </section>
-    
-    <section class="partner-strip-section dark-bg-section">
+ <!--- Main Content ends here --->   
+ <!---partner strip Section starts here --->
+    <section class="partner-strip-section">
         <div class="container partner-logos">
             <span>AccouConsult</span>
             <span>AL EMAD</span>
@@ -72,10 +75,11 @@
             <span><i class="fas fa-gem"></i> GULF ART GALLERY</span>
         </div>
     </section>
-
+<!---partner strip Section ends here --->
+<!--- Web Services Grid Section starts here --->
     <section class="web-services-grid-section">
         <div class="container">
-            <h2 class="section-title light-text">WEB DESIGN SERVICES</h2>
+            <h2 class="web-title light-text">WEB DESIGN SERVICES</h2>
             <p class="section-subtitle green-text">Making Your First Digital Impression a Timeless Stamp</p>
             
             <div class="web-service-grid">
@@ -106,7 +110,8 @@
             </div>
         </div>
     </section>
-
+<!--- Web Services Grid Section ends here --->
+<!-- Get the Edge starts here --->
     <section class="whats-included-section">
         <div class="container">
             <h2 class="section-title dark-text">Get The Edge <br> What's Included?</h2>
@@ -151,12 +156,12 @@
             </div>
         </div>
     </section>
-
+<!-- Get the Edge ends here --->
+ <!--our design process starts here-->
     <section class="design-process-section">
         <div class="container">
-            <h2 class="section-title dark-text">OUR DESIGN PROCESS</h2>
+             <h2 class="success-title">SUCCESS STORIES</h2>
             <p class="process-subheading">Create wireframes which plan out the structure and user flow of your website</p>
-
             <div class="process-flex-container">
                 <div class="process-steps-vertical">
                     <div class="v-tab active" data-phase="discovery">PHASE 1: Discovery</div>
@@ -168,7 +173,7 @@
 
                 <div class="process-details">
                     <div class="phase-content active" id="discovery">
-                        <img src="https://via.placeholder.com/300x200?text=Phase+1+Discovery" alt="Discovery Phase Graphic">
+                        <img src="img/c2.jpg" alt="Discovery Phase Graphic">
                         <div class="text-box">
                             <p class="phase-title green-text">PHASE 1</p>
                             <h3>Discovery</h3>
@@ -179,7 +184,8 @@
             </div>
         </div>
     </section>
-
+ <!--our design process ends here-->
+<!--post launch starts here --->
     <section class="post-launch-section dark-bg-section">
         <div class="container post-launch-content">
             <div class="left-tabs">
@@ -203,7 +209,8 @@
             </div>
         </div>
     </section>
-    
+<!--post launch ends here--->
+<!---FAQ Section Starts Here --->
     <section class="faq-section light-bg-section">
         <div class="container">
             <h2 class="section-title dark-text">FAQ'S</h2>
@@ -243,18 +250,21 @@
             </div>
         </div>
     </section>
-
-    <section class="green-cta-banner green-bg-section">
-        <div class="container cta-content-web">
-            <h3 class="dark-text">Turning Ideas into Websites!</h3>
-            <a href="#" class="btn-primary-dark">Book A Free Consultation</a>
+<!---FAQ Section Ends Here-->
+<!--- CTA Banner Section starts here --->
+    <section class="cta-banner-section">
+        <div class="container cta-content">
+            <p>Be Our Success Story</p>
+            <small>Find out how we've exceeded client expectations</small>
+            <a href="#" class="btn-cta-consultation">Book a Free Consultation</a>
         </div>
     </section>
-
-    <section class="scroll-away-section">
+<!--- CTA Banner Section ends here --->
+<!--- Contact Form Dark Section starts here --->
+    <section id="contact-form-dark" class="scroll-away-section">
         <div class="container scroll-content">
             <div class="left-text">
-                <h2>YOUR NEXT <br> CAMPAIGN IS JUST <br> A SCROLL AWAY!</h2>
+                <h2>YOUR NEXT <br>CAMPAIGN IS JUST<br> A SCROLL AWAY!</h2>
                 <div class="contact-info">
                     <p><i class="fas fa-map-marker-alt green-text"></i> Office Address: 10X Digital, Office Complex, Dubai, United Arab Emirates.</p>
                     <p><i class="fas fa-phone-alt green-text"></i> Call Us: +971 4 564 4587</p>
@@ -265,12 +275,12 @@
                 <form class="contact-form">
                     <div class="form-row">
                         <input type="text" placeholder="Full Name" required>
-                        <input type="email" placeholder="Email Address" required>
-                    </div>
-                    <div class="form-row">
-                        <input type="tel" placeholder="Your Phone" required>
+                        <input type="email" placeholder="Mobile Number" required>
+                    </div><br>
+                    <div class="form-row1">
+                        <input type="tel" placeholder="Email Address" required>
                         <select name="service_needed" required>
-                            <option value="">- Select Service -</option>
+                            <option value="">Select Service</option>
                             <option value="seo">SEO</option>
                             <option value="google_ads">Google Ads</option>
                             <option value="web_dev">Website Development</option>
@@ -283,7 +293,8 @@
             </div>
         </div>
     </section>
-
+<!--- Contact Form Dark Section ends here --->
+<!--- Footer Section starts here --->
     <footer class="main-footer">
         <div class="container footer-content">
             <div class="footer-left">
@@ -302,8 +313,8 @@
                     <div>
                         <h4>Overview</h4>
                         <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Portfolio</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="portfolio.html">Portfolio</a></li>
                             <li><a href="#">Privacy Policy</a></li>
                             <li><a href="#">Terms of Services</a></li>
                         </ul>
@@ -311,15 +322,15 @@
                     <div>
                         <h4>Web Solutions</h4>
                         <ul>
-                            <li><a href="#">Website Development</a></li>
-                            <li><a href="#">Search Engine Optimization</a></li>
-                            <li><a href="#">Google Ads</a></li>
-                            <li><a href="#">Social Media</a></li>
+                            <li><a href="webdesign.html">Website Development</a></li>
+                            <li><a href="seo.html">Search Engine Optimization</a></li>
+                            <li><a href="pcc.html">Google Ads</a></li>
+                            <li><a href="socialmedia.html">Social Media</a></li>
                         </ul>
                     </div>
                     <div>
                         <h4>Digital Success Awaits</h4>
-                        <img src="https://via.placeholder.com/150x40?text=Google+Reviews" alt="Google Business Profile Reviews" class="google-review-badge">
+                        <img src="img/project3.jpg" alt="Google Business Profile Reviews" class="google-review-badge">
                         <div class="partner-logo-large">Google Partner</div>
                     </div>
                 </div>
@@ -329,7 +340,7 @@
              &copy; 2025 TENX DIGITAL. All rights reserved.
         </div>
     </footer>
-    
+<!--- Footer Section ends here --->
     <script>
         // Simple script for the vertical process tab functionality
         document.addEventListener('DOMContentLoaded', () => {
@@ -340,7 +351,7 @@
                 'discovery': {
                     title: 'Discovery',
                     text: 'Our team will perform research and discovery to plan and inform the phases of the project. We define goals, target audience, and scope.',
-                    image: 'https://via.placeholder.com/300x200?text=Phase+1+Discovery'
+                    image: '.img/project1.jpg'
                 },
                 'wireframe': {
                     title: 'Wireframing',

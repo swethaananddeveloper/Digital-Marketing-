@@ -4,418 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How Voice Search Is Changing the Ecommerce Funnel - 10X Digital</title>
+    <link rel="stylesheet" href="./css/style.css"> 
+
     <link rel="stylesheet" href="../css/blog.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
     <style>
-        /* --- Root and General Styles (Reused from Blog List) --- */
-        :root {
-            --primary-dark: #1e1e2e;
-            --secondary-dark: #070e08;
-            --accent-green: #90ee01;
-            --accent-pink: #f06292;
-            --text-light: #ffffff;
-            --text-faded: #b0b0b0;
-            --background-dark: #161625; /* Slightly lighter background for the content area */
-            --sidebar-bg: #222233;
-            --input-bg: #0d0d1a;
-            --link-color: #448aff; /* Blue/Purple link color for contrast */
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background-color: var(--primary-dark);
-            color: var(--text-faded);
-            line-height: 1.6;
-        }
-
-        a {
-            text-decoration: none;
-            color: var(--link-color);
-        }
-
-        /* --- Header Styling (From Blog List) --- */
-        .header-nav {
-            background-color: var(--secondary-dark);
-            height: 80px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 40px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .logo {
-            font-size: 30px;
-            font-weight: bold;
-            color: var(--text-light);
-            letter-spacing: -2px;
-        }
-
-        .logo span {
-            color: var(--accent-green);
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-        }
-
-        .nav-links li {
-            margin-left: 30px;
-            font-size: 16px;
-            font-weight: 500;
-            text-transform: uppercase;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent-green);
-        }
-
-        .contact-btn {
-            background-color: var(--accent-green);
-            color: var(--secondary-dark);
-            padding: 12px 25px;
-            border-radius: 30px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-
-        .contact-btn:hover {
-            background-color: #bff35c;
-        }
         
-        /* --- Blog Post Layout --- */
-        .post-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            display: grid;
-            grid-template-columns: 2fr 1fr; /* Two-column layout */
-            gap: 40px;
-            background-color: var(--primary-dark);
-        }
-
-        /* --- Main Content Area --- */
-        .main-content {
-            padding: 0 20px;
-        }
-        
-        .feature-image-header {
-            background-color: var(--sidebar-bg);
-            border-radius: 10px;
-            overflow: hidden;
-            margin-bottom: 30px;
-            padding: 30px 0;
-            position: relative;
-            background-image: linear-gradient(135deg, #7c4dff, #448aff); /* Matches Voice Search card */
-            min-height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-        }
-
-        .feature-image-header .logo-text {
-            position: absolute;
-            top: 20px;
-            left: 30px;
-            color: rgba(255, 255, 255, 0.5);
-            font-weight: bold;
-            font-size: 14px;
-        }
-
-        .feature-image-header h1 {
-            color: var(--text-light);
-            font-size: 48px;
-            font-weight: 800;
-            line-height: 1.1;
-            max-width: 400px;
-        }
-
-        .post-meta {
-            margin-bottom: 30px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding-bottom: 20px;
-        }
-        
-        .post-meta h2 {
-            color: var(--text-light);
-            font-size: 32px;
-            margin-bottom: 15px;
-        }
-
-        .post-meta .info-row {
-            display: flex;
-            gap: 20px;
-            font-size: 14px;
-            color: var(--text-faded);
-        }
-
-        .post-meta .info-row i {
-            margin-right: 5px;
-            color: var(--accent-green);
-        }
-
-        .post-body h1, .post-body h2, .post-body h3 {
-            color: var(--text-light);
-            margin-top: 30px;
-            margin-bottom: 15px;
-            border-left: 4px solid var(--accent-green);
-            padding-left: 10px;
-        }
-        
-        .post-body h1 { font-size: 28px; }
-        .post-body h2 { font-size: 24px; }
-        .post-body h3 { font-size: 20px; }
-        
-        .post-body p {
-            margin-bottom: 20px;
-            color: var(--text-faded);
-        }
-        
-        .post-body ul {
-            list-style: none;
-            padding-left: 20px;
-            margin-bottom: 20px;
-        }
-
-        .post-body ul li {
-            position: relative;
-            margin-bottom: 10px;
-            padding-left: 15px;
-        }
-
-        .post-body ul li::before {
-            content: "•";
-            color: var(--accent-green);
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-            font-size: 1.2em;
-            line-height: 1.4;
-        }
-        
-        .post-body strong {
-            color: var(--accent-green); /* Highlight key terms like Awareness, Consideration */
-        }
-        
-        /* --- Sidebar Area --- */
-        .sidebar {
-            padding: 0 10px;
-        }
-        
-        /* Search Box */
-        .sidebar .widget-search {
-            margin-bottom: 40px;
-            background-color: var(--sidebar-bg);
-            padding: 20px;
-            border-radius: 8px;
-        }
-        
-        .widget-search input[type="text"] {
-            width: calc(100% - 75px);
-            padding: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            background-color: var(--input-bg);
-            color: var(--text-light);
-            margin-right: 5px;
-            border-radius: 4px;
-        }
-        
-        .widget-search button {
-            width: 70px;
-            padding: 10px;
-            background-color: var(--link-color);
-            color: var(--text-light);
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-        
-        /* Contact Form (Let's Work Together) */
-        .widget-contact {
-            background-color: var(--sidebar-bg);
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 40px;
-            color: var(--text-light);
-        }
-        
-        .widget-contact h3 {
-            color: var(--accent-pink);
-            font-size: 18px;
-            margin-bottom: 15px;
-        }
-        
-        .widget-contact label {
-            display: block;
-            font-size: 14px;
-            margin-bottom: 5px;
-            color: var(--text-faded);
-        }
-
-        .widget-contact input[type="text"],
-        .widget-contact input[type="tel"],
-        .widget-contact input[type="email"],
-        .widget-contact input[type="business"] {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 15px;
-            border: 1px solid var(--accent-pink);
-            background-color: var(--input-bg);
-            color: var(--text-light);
-            border-radius: 4px;
-        }
-        
-        .widget-contact .checkbox-group {
-            margin-top: 15px;
-            margin-bottom: 20px;
-        }
-        
-        .widget-contact .checkbox-group div {
-            margin-bottom: 8px;
-            font-size: 14px;
-            color: var(--text-faded);
-        }
-        
-        .widget-contact .checkbox-group input[type="checkbox"] {
-            margin-right: 10px;
-        }
-
-        /* Budget Slider */
-        .widget-contact .budget-slider {
-            margin-top: 20px;
-        }
-        
-        /* --- Footer (From Blog List) --- */
-        .footer {
-            background-color: #12121e;
-            padding: 50px 40px;
-            color: var(--text-faded);
-            font-size: 14px;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 40px;
-            max-width: 1200px;
-            margin: 0 auto 30px;
-        }
-
-        .footer h4 {
-            color: var(--text-light);
-            font-size: 16px;
-            margin-bottom: 20px;
-        }
-
-        .contact-info p, .footer-links li {
-            margin-bottom: 10px;
-        }
-
-        .contact-info .office-location {
-            color: var(--accent-pink);
-            font-weight: bold;
-        }
-
-        .footer-links li:hover {
-            text-decoration: underline;
-        }
-
-        .social-icons a {
-            margin-right: 15px;
-            font-size: 20px;
-            color: var(--text-faded);
-        }
-        
-        .social-icons {
-            display: flex;
-        }
-        /* Style for the social icons (based on the image) */
-        .social-icons a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 30px;
-            height: 30px;
-            background-color: rgba(255, 255, 255, 0.1); 
-            border-radius: 50%;
-            margin-right: 10px;
-            font-size: 14px;
-            color: var(--text-light);
-            text-decoration: none;
-        }
-
-        .social-icons a:hover {
-            background-color: var(--accent-pink);
-            color: var(--text-light);
-        }
-
-
-        .copyright {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        /* --- Media Queries --- */
-        @media (max-width: 992px) {
-            .post-container {
-                grid-template-columns: 1fr; /* Stack columns on tablet/mobile */
-                gap: 20px;
-            }
-            .main-content {
-                padding: 0;
-            }
-            .footer-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 600px) {
-            .header-nav {
-                padding: 0 20px;
-            }
-            .nav-links {
-                display: none; /* Hide main navigation on small screens */
-            }
-            .feature-image-header h1 {
-                font-size: 36px;
-            }
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
-        }
     </style>
 </head>
 <body>
-
-    <header class="header-nav">
-        <div class="logo">X<span>DIGITAL</span></div>
-        <ul class="nav-links">
-            <li><a href="../index.html">HOME</a></li>
-            <li><a href="../about.html">ABOUT</a></li>
-            <li><a href="../services.html">SERVICES</a></li>
-            <li><a href="../portfolio.html">PORTFOLIO</a></li>
-            <li><a href="../blog.html">BLOG</a></li>
-            <li><a href="../contact.html">CONTACT</a></li>
-        </ul>
-        <a href="../contact.html" class="contact-btn">Let's Talk</a>
+<!----Header & Navigation starts here-->
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo">XDIGITAL</div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="indexs.html" class="active">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    
+                    <li class="dropdown">
+                        <a href="#services-section">SERVICES</a>
+                        <ul class="dropdown-content">
+                            <!---<li><a href="services/seo-dubai.html">SEO Dubai</a></li>
+                            <li><a href="services/seo-abudhabi.html">SEO Abu Dhabi</a></li> --->
+                            <li><a href="pcc.html">Google Ads (PPC)</a></li>
+                            <li><a href="socialmedia.html">Social Media Marketing</a></li>
+                           <li><a href="seo.html">Website Maintenance</a></li>
+                            <li><a href="webdesign.html">Website Development</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="portfolio.html">PORTFOLIO</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="btn-primary">Let's Talk</a>
+        </div>
     </header>
+<!---Header & Navigation ends here --->
 
     <div class="post-container">
-        
         <div class="main-content">
-
             <div class="feature-image-header">
                 <div class="logo-text">TC The Cogent</div>
                 <h1>How Voice Search Is Changing the Ecommerce Funnel</h1>
@@ -504,12 +134,12 @@
                     </div>
 
                     <label>Budget</label>
-                    <input type="range" class="budget-slider" min="0" max="100" value="50"> 
+                    <input type="range" class="budget-slider" min="0" max="100" value="50" style="color: orangered;"> 
                     
                     </form>
             </div>
             
-            <div class="widget-categories">
+            <div class="widget-categories" style="color: rgb(255, 255, 255);">
                 <h4>Blog</h4>
                 <ul>
                     <li>Digital Marketing</li>
@@ -521,7 +151,7 @@
             </div>
             
             <div class="widget-newsletter" style="background-color: var(--sidebar-bg); padding: 20px; border-radius: 8px; margin-top: 40px; color: var(--text-light);">
-                <h4>Explore, Learn, and Grow with Us.</h4>
+                <h4 style="color: black;">Explore, Learn, and Grow with Us.</h4>
                 <label for="subscribe-email">Email Address*</label>
                 <input type="email" id="subscribe-email" placeholder="Enter your email address" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid var(--accent-pink); background-color: var(--input-bg); color: var(--text-light); border-radius: 4px;">
                 <button style="width: 100%; padding: 10px; background-color: var(--accent-pink); color: var(--text-light); border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">Subscribe</button>
@@ -531,61 +161,96 @@
 
     </div>
 
-    <footer class="footer">
-        <div class="footer-grid">
-            <div class="contact-info">
-                <div class="logo-text" style="color: var(--accent-pink); font-size: 18px; margin-bottom: 20px;">TC The Cogent</div>
-                <h4>Reach Out To Us</h4>
-                <p class="office-location">JAIPUR OFFICE (HEAD OFFICE):</p>
-                <p>A-46-A, Shri Anand Vihar, Vande Mataram Marg, Near Mahima Mansarovar, Jaipur, Rajasthan 302020</p>
-                <p class="office-location">DELHI OFFICE:</p>
-                <p>159 Kucha ghasi ram, chandni chowk, Delhi (110006)</p>
-                <br>
-                <h4>CONTACT DETAILS:</h4>
-                <p>📧 info@thecogent.in</p>
-                <p>📞 +91-9785 957 575, +91-4785 547 575</p>
+<!--- CTA Banner Section starts here --->
+    <section class="cta-banner-section">
+        <div class="container cta-content">
+            <p>Be Our Success Story</p>
+            <small>Find out how we've exceeded client expectations</small>
+            <a href="#" class="btn-cta-consultation">Book a Free Consultation</a>
+        </div>
+    </section>
+<!--- CTA Banner Section ends here --->
+<!--- Contact Form Dark Section starts here --->
+    <section id="contact-form-dark" class="scroll-away-section">
+        <div class="container scroll-content">
+            <div class="left-text">
+                <h2>YOUR NEXT <br>CAMPAIGN IS JUST<br> A SCROLL AWAY!</h2>
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt green-text"></i> Office Address: 10X Digital, Office Complex, Dubai, United Arab Emirates.</p>
+                    <p><i class="fas fa-phone-alt green-text"></i> Call Us: +971 4 564 4587</p>
+                    <p><i class="fas fa-envelope green-text"></i> Mail Us: info@10xdigital.ae</p>
+                </div>
             </div>
-            <div>
-                <h4>DIGITAL MARKETING</h4>
-                <ul>
-                    <li>Digital Marketing</li>
-                    <li>Social Media Marketing</li>
-                    <li>SEO</li>
-                    <li>PPC Marketing</li>
-                    <li>E-Commerce Marketing</li>
-                    <li>Video Production</li>
-                    <li>Influencer Marketing</li>
-                </ul>
+            <div class="right-form">
+                <form class="contact-form">
+                    <div class="form-row">
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="email" placeholder="Mobile Number" required>
+                    </div><br>
+                    <div class="form-row1">
+                        <input type="tel" placeholder="Email Address" required>
+                        <select name="service_needed" required>
+                            <option value="">Select Service</option>
+                            <option value="seo">SEO</option>
+                            <option value="google_ads">Google Ads</option>
+                            <option value="web_dev">Website Development</option>
+                            <option value="social_media">Social Media</option>
+                        </select>
+                    </div>
+                    <textarea placeholder="Enter your message"></textarea>
+                    <button type="submit" class="btn-form-submit">LET'S TALK</button>
+                </form>
             </div>
-            <div>
-                <h4>TECHNOLOGY SERVICES</h4>
-                <ul>
-                    <li>Website Development</li>
-                    <li>App Development</li>
-                </ul>
-            </div>
-            <div>
-                <h4>QUICK LINKS</h4>
-                <ul class="footer-links">
-                    <li>About us</li>
-                    <li>Blogs</li>
-                    <li>Join Our Growing Team</li>
-                    <li>Contact Us at</li>
-                </ul>
+        </div>
+    </section>
+<!--- Contact Form Dark Section ends here --->
+<!--- Footer Section starts here --->
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-left">
+                <div class="footer-logo-box">
+                    <h2>STRATEGIC. <br> VISIBILITY. <br> RESULTS.</h2>
+                    <p>let's build something awesome</p>
+                </div>
                 <div class="social-icons">
-                    <a href="#">f</a>
-                    <a href="#">in</a>
-                    <a href="#">t</a>
-                    <a href="#">y</a>
-                    <a href="#">r</a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-center">
+                <div class="footer-links-grid">
+                    <div>
+                        <h4>Overview</h4>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Services</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Web Solutions</h4>
+                        <ul>
+                            <li><a href="webdesign.html">Website Development</a></li>
+                            <li><a href="seo.html">Search Engine Optimization</a></li>
+                            <li><a href="pcc.html">Google Ads</a></li>
+                            <li><a href="socialmedia.html">Social Media</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Digital Success Awaits</h4>
+                        <img src="img/project3.jpg" alt="Google Business Profile Reviews" class="google-review-badge">
+                        <div class="partner-logo-large">Google Partner</div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="copyright">
-            <a href="#" style="color: var(--accent-pink);">PRIVACY POLICY</a> | <a href="#" style="color: var(--accent-pink);">COMPANY POLICY</a> | <a href="#" style="color: var(--accent-pink);">VACCINATION POLICY</a>
-            <p>Copyright 2024 The Cogent 360 Solutions Pvt. Ltd. All Rights Reserved.</p>
+             &copy; 2025 TENX DIGITAL. All rights reserved.
         </div>
     </footer>
+<!--- Footer Section ends here --->
 
 </body>
 </html>

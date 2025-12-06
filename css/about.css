@@ -1,43 +1,194 @@
 /* Custom Properties & Reset */
-:root {
-    --color-dark-main: #0c1815; /* A deep, dark green/black */
-    --color-dark-accent: #111a18; /* Slightly lighter for contrast */
-    --color-green-primary: #85ff21; /* The vibrant lime green */
-    --color-text-light: #f0f0f0;
-    --color-text-secondary: #a9a9a9;
-    --color-white: #ffffff;
-    --font-header: 'Arial Black', sans-serif;
-    --font-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* --- Utility Classes & Buttons --- */
+
+.light-text {
+    color: var(--color-text-light);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.section-title {
+    font-family: var(--font-header);
+    font-size: 40px;
+    margin-bottom: 5px;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
 }
 
-body {
-    font-family: var(--font-body);
-    color: var(--color-dark-main); /* Default text color for light sections */
-    background-color: var(--color-white);
-    line-height: 1.6;
+
+
+
+
+
+
+
+
+
+
+/* --- Guaranteed Performance Banner --- */
+.guaranteed-performance-banner {
+    background-color: var(--color-green-primary);
+    padding: 40px 0;
+    position: relative;
+    overflow: hidden;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-a {
-    color: var(--color-green-primary);
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-a:hover {
+.guaranteed-performance-banner .banner-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: var(--color-dark-main);
 }
+
+.guaranteed-performance-banner h2 {
+    font-family: var(--font-header);
+    font-size: 30px;
+    line-height: 1.1;
+}
+
+.guaranteed-performance-banner p {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+/* --- Testimonials Section 
+.testimonials-section {
+    background-color: black;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.testimonials-section .section-subtitle {
+    font-size: 16px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.testimonial-card {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid var(--color-green-primary);
+    border-radius: 8px;
+    background-color: rgb(141, 75, 9);
+}
+
+.testimonial-card blockquote {
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 15px;
+    color: var(--color-text-light);
+    line-height: 1.5;
+}
+
+.client-name {
+    font-weight: bold;
+    font-size: 16px;
+    display: block;
+    margin-top: 10px;
+}
+.client-title {
+    font-size: 14px;
+}
+
+.slider-dots {
+    margin-top: 20px;
+}
+
+.dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-text-secondary);
+    border-radius: 50%;
+    margin: 0 4px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: var(--color-green-primary);
+    width: 10px;
+    height: 10px;
+} --- Testimonials Section ends here --- */
+
+/* --- Industries We Serve Section 
+.industries-section {
+    padding: 80px 0;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.industry-intro {
+    max-width: 900px;
+    margin: 20px auto 40px;
+    font-size: 15px;
+    color: #555;
+}
+
+.industries-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-top: 1px solid #646464;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 40px;
+}
+
+.tab-item {
+    padding: 15px 20px;
+    color: var(--color-dark-main);
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.tab-item i {
+    margin-right: 5px;
+}
+
+.tab-item:hover, .tab-item.active {
+    border-bottom: 2px solid var(--color-green-primary);
+    color: var(--color-green-primary);
+}
+
+.industry-content-preview {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.industry-content-preview .text-content {
+    flex: 1;
+}
+
+.industry-content-preview .image-content {
+    flex: 1;
+}
+
+.industry-content-preview img {
+    border-radius: 8px;
+}
+
+
+Industries We Serve Section ends here --- */
+
+
+
+
+
+
+
+
+
 
 ul {
     list-style: none;
@@ -62,37 +213,7 @@ img {
     color: var(--color-text-light);
 }
 
-.btn-primary {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: var(--color-green-primary);
-    color: var(--color-dark-main);
-    text-transform: uppercase;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
 
-.btn-primary:hover {
-    background-color: #a3ff52;
-}
-
-.btn-secondary {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: transparent;
-    border: 2px solid var(--color-green-primary);
-    color: var(--color-green-primary);
-    text-transform: uppercase;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.btn-secondary:hover {
-    background-color: var(--color-green-primary);
-    color: var(--color-dark-main);
-}
 
 .section-title {
     font-family: var(--font-header);
@@ -102,9 +223,7 @@ img {
     text-transform: uppercase;
     text-align: center; /* Default for titles */
 }
-.section-title.light-text {
-    color: var(--color-text-light);
-}
+
 
 .section-subtitle {
     color: var(--color-green-primary);
@@ -118,251 +237,26 @@ img {
     color: var(--color-text-light);
 }
 
-/* --- Header & Navigation (reused from previous) --- */
-.main-header {
-    background-color: var(--color-dark-accent);
-    padding: 15px 0;
-    border-bottom: 2px solid var(--color-green-primary);
-}
 
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
-.logo {
-    font-family: var(--font-header);
-    font-size: 24px;
-    color: var(--color-green-primary);
-}
 
-.main-nav ul {
-    display: flex;
-    gap: 25px;
-    text-transform: uppercase;
-    font-weight: 500;
-}
 
-.main-nav a {
-    color: var(--color-text-light);
-}
-.main-nav a:hover, .main-nav a.active {
-    color: var(--color-green-primary);
-}
 
-/* --- About Hero Section --- */
-.about-hero-section {
-    position: relative;
-    background-image: url('https://via.placeholder.com/1600x400?text=About+Hero+Background'); /* Placeholder background image */
-    background-size: cover;
-    background-position: center;
-    padding: 100px 0;
-    text-align: center;
-    color: var(--color-white);
-}
 
-.about-hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
-    z-index: 1;
-}
 
-.about-hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 900px;
-    margin: 0 auto;
-}
 
-.about-hero-content h1 {
-    font-family: var(--font-header);
-    font-size: 60px;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    line-height: 1;
-}
 
-.about-hero-content p {
-    font-size: 20px;
-    margin-bottom: 40px;
-    color: rgba(255, 255, 255, 0.9);
-}
 
-.about-hero-buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
 
-.btn-about-hero {
-    padding: 15px 30px;
-    font-size: 16px;
-}
-
-.btn-tertiary {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: var(--color-dark-main);
-    color: var(--color-green-primary);
-    text-transform: uppercase;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.btn-tertiary:hover {
-    background-color: var(--color-green-primary);
-    color: var(--color-dark-main);
-}
-
-/* --- About Partners Section --- */
-.about-partners-section {
-    background-color: var(--color-dark-main); /* Dark background for this section */
-    padding: 30px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.about-partners-logos {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    color: var(--color-text-secondary);
-    font-size: 12px;
-    text-align: center;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-    gap: 20px; /* Space between items */
-}
-
-.about-partners-logos .fas {
-    display: block;
-    font-size: 28px;
-    margin-bottom: 5px;
-    color: var(--color-green-primary);
-}
-
-/* --- Our Story Section --- */
-.our-story-section {
-    padding: 80px 0;
-    background-color: var(--color-white);
-    text-align: center;
-}
-
-.our-story-section .section-title {
-    margin-bottom: 40px;
-}
-
-.story-paragraph {
-    max-width: 800px;
-    margin: 0 auto 20px auto;
-    font-size: 17px;
-    color: var(--color-dark-main);
-}
-.story-paragraph:last-of-type {
-    margin-bottom: 0;
-}
 
 /* --- Vision & Mission Section --- */
-.vision-mission-section {
-    padding: 80px 0;
-    background-color: var(--color-white);
-}
 
-.vision-mission-content {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-}
 
-.vision-mission-text {
-    flex: 1;
-    text-align: left;
-}
 
-.vision-mission-text .section-title {
-    text-align: left;
-    margin-bottom: 30px;
-}
 
-.vision-mission-text p {
-    font-size: 16px;
-    color: var(--color-dark-main);
-    margin-bottom: 20px;
-}
-.vision-mission-text p:last-child {
-    margin-bottom: 0;
-}
 
-.vision-mission-image-wrapper {
-    flex: 1;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 300px; /* Ensure space for circles */
-}
 
-.vision-mission-image {
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 2;
-}
 
-.green-circle {
-    position: absolute;
-    background-color: var(--color-green-primary);
-    border-radius: 50%;
-    opacity: 0.8;
-    z-index: 1;
-}
-
-.green-circle-1 {
-    width: 60px;
-    height: 60px;
-    top: 0%;
-    left: 80%;
-}
-
-.green-circle-2 {
-    width: 100px;
-    height: 100px;
-    bottom: 5%;
-    left: 85%;
-}
-
-.green-circle-3 {
-    width: 40px;
-    height: 40px;
-    top: 20%;
-    left: 90%;
-}
-
-/* --- One Team Section --- */
-.one-team-section {
-    padding: 80px 0;
-    background-color: var(--color-white);
-    text-align: center;
-}
-
-.one-team-section .section-title {
-    margin-bottom: 40px;
-}
-
-.team-paragraph {
-    max-width: 900px;
-    margin: 0 auto 20px auto;
-    font-size: 16px;
-    color: var(--color-dark-main);
-}
-.team-paragraph:last-of-type {
-    margin-bottom: 0;
-}
 
 
 /* --- Footer (reused from previous) --- */

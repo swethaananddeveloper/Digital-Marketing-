@@ -89,38 +89,7 @@ img {
     color: var(--color-text-light);
 }
 
-/* --- Header & Navigation (reused) --- */
-.main-header {
-    background-color: var(--color-dark-accent);
-    padding: 15px 0;
-    border-bottom: 2px solid var(--color-green-primary);
-}
 
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-family: var(--font-header);
-    font-size: 24px;
-    color: var(--color-green-primary);
-}
-
-.main-nav ul {
-    display: flex;
-    gap: 25px;
-    text-transform: uppercase;
-    font-weight: 500;
-}
-
-.main-nav a {
-    color: var(--color-text-light);
-}
-.main-nav a:hover, .main-nav a.active {
-    color: var(--color-green-primary);
-}
 
 /* --- Blog Hero Section --- */
 .blog-hero-section {
@@ -423,87 +392,6 @@ img {
 }
 
 
-/* --- Footer (reused) --- */
-.main-footer {
-    padding: 60px 0 20px;
-    background-color: var(--color-dark-main);
-    color: var(--color-text-light);
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    gap: 50px;
-    padding-bottom: 40px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.footer-left {
-    flex: 1;
-}
-
-.footer-left h2 {
-    font-family: var(--font-header);
-    font-size: 30px;
-    line-height: 1;
-    color: var(--color-green-primary);
-    margin-bottom: 15px;
-}
-
-.footer-left p {
-    font-size: 14px;
-    color: var(--color-text-secondary);
-}
-
-.social-icons {
-    margin-top: 20px;
-    display: flex;
-    gap: 15px;
-}
-
-.social-icons a {
-    color: var(--color-text-secondary);
-    font-size: 20px;
-}
-
-.social-icons a:hover {
-    color: var(--color-green-primary);
-}
-
-
-.footer-center {
-    flex: 2;
-}
-
-.footer-links-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-.footer-links-grid h4 {
-    color: var(--color-text-light);
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    font-size: 16px;
-}
-
-.footer-links-grid li a {
-    color: var(--color-text-secondary);
-    font-size: 14px;
-    line-height: 1.8;
-}
-
-.footer-right {
-    flex: 1;
-    text-align: right;
-}
-
-.footer-right p {
-    color: var(--color-text-secondary);
-    font-size: 14px;
-    margin-bottom: 10px;
-}
 
 .partner-logo {
     display: inline-block;
@@ -584,3 +472,6 @@ img {
         width: 100%;
     }
 }
+
+
+/////
