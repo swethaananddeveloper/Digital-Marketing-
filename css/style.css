@@ -68,7 +68,7 @@ img {
 .logo {
     font-family: var(--font-header);
     font-size: 24px;
-    color: var(--color-green-primary);
+    color: rgb(179, 60, 16);
 }
 
 .main-nav ul {
@@ -131,8 +131,8 @@ img {
 .btn-primary {
     display: inline-block;
     padding: 10px 0px;
-    background-color: rgb(39, 38, 38);
-    color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     text-transform: uppercase;
     font-weight: bold;
     border-radius: 5px;
@@ -140,56 +140,59 @@ img {
     border: none;
     cursor: pointer;
 }
-.per{
-    color: white;
-}
 .btn-primary:hover {
-    background-color: #ffffff;
+    background-color: #91320d;
 }
 /*---header section ends here---*/
 
 /* --- Home Hero Section starts here--- */
-.home-hero-section {
-    background-color: black;
-    background-image: linear-gradient(rgba(217, 130, 37, 0.8), rgba(2, 2, 2, 0.8)), url('https://via.placeholder.com/1600x600?text=Dubai+City+Background');
-    background-size: cover;
-    background-position: center;
-    padding: 120px 0;
-    text-align: center;
-    color: var(--color-white);
+/* --- HERO CONTENT CONTAINER --- */
+.heros-content-container {
+    padding-top: 100px; /* Space below the nav */
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-.hero-content h1 {
-    font-family: var(--font-header);
-    font-size: 55px;
+/* --- MOMENTUM HEADLINE --- */
+.momentum-headline {
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 1.2;
     margin-bottom: 20px;
     text-transform: uppercase;
-    line-height: 1.1;
 }
 
-.hero-content h1{
-    /* Style for the 'DIGITAL MARKETING' part of the title */
-    color: rgb(255, 255, 255);
+.momentum-headline .highlighted {
+    color: #92ff8c; /* Bright green text */
+    display: block; /* Forces the highlighted text onto its own line for separation */
+    margin: 5px 0;
 }
 
-.hero-content .hero-subtitle {
+/* --- EXPERTISE MATRIX --- */
+.expertise-matrix {
     font-size: 18px;
-    color: rgb(247, 247, 247);
-    margin-bottom: 30px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    line-height: 1.5;
+    color: #ccc;
 }
 
-.btn-hero-start {
+/* --- INITIATION GATEWAY (Main CTA) --- */
+.initiation-gateway {
     display: inline-block;
-    padding: 15px 30px;
-    background-color: rgb(176, 96, 20);
-    color: rgb(255, 255, 255);
+    background-color: #92ff8c; /* Bright green button */
+    color: #000;
+    padding: 15px 40px;
+    text-decoration: none;
+    font-size: 16px;
     font-weight: bold;
-    text-transform: uppercase;
     border-radius: 5px;
-    
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.initiation-gateway:hover {
+    background-color: #6eff64;
+    transform: translateY(-2px); /* Slight lift on hover */
 }
 
 /* --- Home Hero Section ends here--- */
@@ -450,7 +453,7 @@ img {
  /* The entire section background */
         .client-testimonials-grid {
             background-color: #000000; /* Very light background matching the image */
-            padding: 80px 0;
+            padding: 20px 0;
             position: relative;
             overflow: hidden; 
             text-align: center; /* Center section titles */
@@ -969,13 +972,14 @@ img {
 
 @media (max-width: 768px) {
     .home-hero-section {
-        padding: 60px 0;
+        padding: 20px 0;
     }
     .hero-content h1 {
         font-size: 40px;
+
     }
     .service-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(1, 1fr);
     }
     .performance-content {
         flex-direction: column;
@@ -1037,7 +1041,7 @@ img {
     gap: 20px;
 }
 .btn-about-hero {
-    padding: 15px 30px;
+    padding: 40px 30px;
     font-size: 16px;
 }
 .btn-rts {

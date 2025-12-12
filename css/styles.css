@@ -1,0 +1,1909 @@
+/* --- Basic Reset and Font Setup --- */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif; /* Use a common font */
+    background-color: #000;
+}
+
+
+
+/* --- Basic Nav Links Styling (Assuming some setup) --- */
+.strategy-nav-links {
+    display: flex;
+    gap: 20px;
+    /* This styling depends on your header/parent container */
+}
+
+.strategy-nav-links a {
+    color: inherit; /* Or specify a color like white/black */
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block; /* Important for padding/hover area */
+}
+
+/* --- Dropdown Specific Styles --- */
+
+/* 1. The Parent Container */
+.dropdown {
+    position: relative; /* Essential for positioning the dropdown content */
+    display: inline-block; /* Allows it to flow naturally with other nav links */
+}
+
+/* 2. The Dropdown Button/Link */
+.dropbtn {
+    /* Styles are inherited from .strategy-nav-links a */
+    cursor: pointer;
+}
+
+/* 3. The Dropdown Menu Content (Hidden by default) */
+.dropdown-content {
+    display: none; /* Initially hides the menu */
+    position: absolute;
+    min-width: 180px; /* Ensures space for longer text */
+    z-index: 1; /* Ensures it appears above other elements */
+    top: 100%; /* Positions it directly below the 'SERVICES' link */
+    left: 0;
+    
+    background-color: #333; /* Dark background */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 4px;
+}
+
+/* 4. Links inside the Dropdown */
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block; /* Makes each link a full-width block */
+}
+
+.dropdown-content a:hover {
+    background-color: #f15106; /* Slightly lighter background on hover */
+    color: #010101; /* Optional accent color */
+}
+
+/* 5. The Hover Effect: Show the dropdown when hovering over the parent */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* --- VELOCITY HEADER (Main Section) --- */
+.velocity-header {
+    background-color: #0d2816; /* Dark background as a base */
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('path/to/your/abstract-bg-image.jpg'); /* Conceptual background */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 20px 0 100px 0; /* Adjust padding for height */
+    text-align: center;
+    min-height: 10vh; /* Minimum viewport height */
+}
+
+/* --- APEX NAVIGATION BAR --- */
+.apex-navigation-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    height: 80px;
+}
+
+.x-factor-brand-mark {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+
+
+.engagement-catalyst {
+    background-color: #ffffff; /* Bright green button */
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.engagement-catalyst:hover {
+    background-color: #f15106;
+}
+
+/* --- HERO CONTENT CONTAINER --- */
+.hero-content-container {
+    padding-top: 20px; /* Space below the nav */
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* --- MOMENTUM HEADLINE --- */
+.momentum-headline {
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.momentum-headline .highlighted {
+    color: #f15106; /* Bright green text */
+    display: block; /* Forces the highlighted text onto its own line for separation */
+    margin: 5px 0;
+}
+
+/* --- EXPERTISE MATRIX --- */
+.expertise-matrix {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    line-height: 1.5;
+    color: #ccc;
+}
+
+/* --- INITIATION GATEWAY (Main CTA) --- */
+.initiation-gateway {
+    display: inline-block;
+    background-color: #f15106; /* Bright green button */
+    color: #000;
+    padding: 15px 40px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.initiation-gateway:hover {
+    background-color: #ffffff;
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+
+/* Base styling for the whole section to match the image */
+.review-carousel-container {
+    background-color: #1a1a1a; /* Dark background */
+    color: #ffffff; /* White text */
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styling */
+.carousel-header {
+    text-align: center;
+    padding: 0 20px 20px;
+}
+
+.carousel-header h1 {
+    font-size: 2em;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin: 0;
+}
+
+/* Google Rating Section */
+.google-rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    padding: 0 20px;
+    border-bottom: 1px solid #333; /* Separator line */
+    padding-bottom: 20px;
+}
+
+.google-logo {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.rating-details .score {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.rating-details .stars {
+    color: #f15106; /* Google star yellow */
+}
+
+.review-button {
+    background-color: #f15106; /* Google blue */
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* --- CAROUSEL STYLING --- */
+
+.review-carousel {
+    /* Enables horizontal scrolling and hides scrollbar for a cleaner look */
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; /* Makes it snap to review cards */
+    gap: 20px; /* Space between cards */
+    padding: 0 20px; /* Padding for the sides of the scroll view */
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Optional: Hide scrollbar in webkit browsers (Chrome, Safari) */
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+}
+
+.review-carousel::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+
+.review-card {
+    /* Ensures the card takes up a fixed width and doesn't shrink */
+    flex: 0 0 300px; /* Fixed width for the card (adjust as needed) */
+    scroll-snap-align: start; /* Snap point for scrolling */
+    background-color: #2c2c2c; /* Slightly lighter background for the card */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    min-height: 250px; /* Ensure consistent card height */
+    display: flex;
+    flex-direction: column;
+}
+
+.reviewer-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #f15106; /* A primary color */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-right: 10px;
+    color: white;
+}
+
+.name-date {
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    font-weight: bold;
+    color: #ffffff; /* Highlight reviewer name */
+}
+
+.date {
+    font-size: 0.8em;
+    color: #aaa;
+}
+
+.rating-stars {
+    color: #f15106; /* Star color */
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.review-text {
+    font-size: 0.9em;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    flex-grow: 1; /* Allows the text to take up available space */
+}
+
+.read-more {
+    color: #f15106;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: auto; /* Pushes the "Read more" to the bottom */
+}
+
+/* Media Query for larger screens to show multiple cards */
+@media (min-width: 900px) {
+    .review-card {
+        /* On larger screens, calculate a width that fits 3.5 cards with the 20px gap */
+        width: calc((100% - 3 * 20px) / 4); 
+        flex: 0 0 calc((100% - 3 * 20px) / 4);
+    }
+}
+
+/*brand-elevation module starts here*/
+/* Variables for easy color adjustments */
+:root {
+    --dark-bg: #1a1a1a;
+    --text-color: #ffffff;
+    --highlight-color: #f15106; /* Orange/Yellow highlight */
+    --light-gray: #ccc;
+    --dark-panel: #2c2c2c; /* Background for non-active panels/content */
+    --darker-panel: #242424; /* Background for open/active panel */
+}
+
+/* Base section style */
+.dark-background-section {
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    padding: 60px 20px;
+}
+
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 40px;
+}
+
+/* --- Left Content: Text and Skills --- */
+.left-content-area {
+    flex: 1;
+    min-width: 300px; 
+}
+
+.main-heading {
+    font-size: 2.5em;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.subtitle-text {
+    font-size: 1em;
+    color: var(--light-gray);
+    margin-bottom: 15px;
+}
+
+/* Skill Bar Container (Two Columns) */
+.skill-bar-container {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.skill-column {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+}
+
+.skill-item {
+    display: grid;
+    grid-template-columns: repeat(2,1fr) /* Label | Bar | Percentage */
+    align-items: center;
+    gap: 15px;
+}
+
+.skill-label {
+    font-size: 0.85em;
+    font-weight: bold;
+    white-space: nowrap; 
+}
+
+.skill-percentage {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: var(--highlight-color);
+    text-align: right;
+}
+
+.skill-bar {
+    height: 6px;
+    background-color: var(--darker-panel); 
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    background-color: var(--highlight-color); 
+}
+
+/* --- Right Content: Accordion Panels --- */
+.right-accordion-area {
+    flex: 1;
+    min-width: 400px; 
+}
+
+.accordion-panel {
+    background-color: var(--dark-panel);
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.panel-title-bar {
+    padding: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.panel-number {
+    font-size: 1.1em;
+    margin-right: 15px;
+    color: var(--highlight-color);
+}
+
+/* Highlighted panel (The solid orange one) */
+.accordion-panel.highlighted {
+    background-color: var(--highlight-color);
+    color: var(--dark-bg); 
+}
+
+.accordion-panel.highlighted .panel-number {
+    color: var(--dark-bg);
+}
+
+/* Active panel (The one showing content) */
+.accordion-panel.active {
+    background-color: var(--darker-panel); /* Darker gray background */
+}
+
+.accordion-panel.active .panel-title-bar {
+    background-color: transparent;
+}
+
+.panel-content-body {
+    /* Set initial state for transition */
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+.accordion-panel.active .panel-content-body {
+    /* State when active */
+    max-height: 200px; /* Needs to be larger than content height */
+    padding: 0 20px 20px 20px;
+}
+
+.panel-content-body p {
+    font-size: 0.9em;
+    color: var(--light-gray);
+    margin: 0;
+}
+
+/* Media Query for Mobile/Smaller Screens */
+@media (max-width: 900px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .skill-bar-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+/*brand-elevation-module ends here*/
+
+/*our process starts here*/
+/* Variables for colors */
+:root {
+    --light-bg: #f7f7f7; /* Very light gray/off-white background */
+    --main-green: #f15106; /* Light Green for background and buttons (similar to image) */
+    --dark-text: #090909;
+    --highlight-green: #a53911 /* Darker green for text/icons */
+    --light-border: #ccc;
+    --text-gray: #2a2929;
+}
+
+/* Base section and background */
+.process-section-container {
+    background-color: var(--light-bg); 
+    font-family: Arial, sans-serif;
+    padding: 80px 20px 0; /* No bottom padding, banner takes care of it */
+    overflow: hidden; /* To handle any potential overflows from background graphics */
+}
+
+.process-content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Main Section Title */
+.section-main-title {
+    text-align: center;
+    font-size: 3em;
+    font-weight: 800;
+    color: var(--dark-text);
+    margin-bottom: 60px;
+    letter-spacing: 2px;
+}
+
+/* --- Process Steps Layout --- */
+.process-steps-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    padding-bottom: 60px; /* Space for the line below the icons */
+}
+
+/* Horizontal line connecting the steps */
+.process-steps-layout::before {
+    content: "";
+    position: absolute;
+    top: 30px; /* Aligns with the middle of the icon circle */
+    left: 10%; 
+    right: 10%;
+    height: 1px;
+    background-color: var(--light-border);
+    z-index: 1;
+}
+
+.process-step-block {
+    flex: 1 1 20%; /* Distribute space evenly among the 5 steps */
+    text-align: center;
+    position: relative;
+    padding: 0 10px;
+    z-index: 2; /* Keep content above the connecting line */
+}
+
+/* Icon Circle Styling */
+.step-icon-circle {
+    width: 60px;
+    height: 60px;
+    background-color: var(--main-green); /* Green background for the circle */
+    border-radius: 50%;
+    border: 1px solid var(--highlight-green);
+    margin: 0 auto 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 5px var(--light-bg); /* White border effect around the icon */
+}
+
+.icon-placeholder {
+    font-size: 1.5em;
+    color: var(--dark-text); /* Icon color */
+}
+
+/* Step Headings */
+.step-number-heading {
+    font-size: 1.1em;
+    color: var(--dark-text);
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.step-title {
+    font-weight: bold;
+    color: var(--highlight-green); /* Highlight the main step name in green */
+}
+
+/* Step Description */
+.step-description {
+    font-size: 0.9em;
+    color: black;
+    line-height: 1.4;
+}
+
+
+/* --- Call to Action Banner --- */
+.cta-banner-wrapper {
+    background-color: var(--main-green); 
+    color: var(--dark-text);
+    padding: 50px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 50px; /* Space between process and banner */
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-text {
+    font-size: 1.8em;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.cta-button {
+    background-color: transparent;
+    border: 3px solid var(--dark-text);
+    color: var(--dark-text);
+    padding: 15px 30px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: var(--dark-text);
+    color: var(--main-green);
+}
+
+/* Media Query for smaller screens (making it stack vertically) */
+@media (max-width: 900px) {
+    .process-steps-layout {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 0;
+    }
+    
+    /* Hide the horizontal line on mobile */
+    .process-steps-layout::before {
+        display: none;
+    }
+
+    .process-step-block {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .cta-banner-wrapper {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .cta-text {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+}
+/*our process ends here*/
+
+/* service starts here*/
+/* Variables for easy color adjustments */
+:root {
+    --bg-dark: #1a1a1a;        /* Black/Dark Gray Background */
+    --text-light: #ffffff;     /* White Text */
+    --accent-orange: #f15106;  /* Dark Orange Accent */
+}
+
+/* Base section style */
+.dark-module-container {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: Arial, sans-serif;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.service-content-area {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Heading and Subtitle */
+.section-heading {
+    font-size: 2.5em;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.section-subtext {
+    font-size: 1em;
+    color: #ccc;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    line-height: 1.5;
+}
+
+/* --- Service Grid Layout --- */
+.service-cards-grid {
+    display: grid;
+    /* 3 columns on large screens */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+}
+
+.service-card-item {
+    background-color: transparent; /* Seamless with the dark background */
+    padding: 40px 20px;
+    border: 1px solid #333; /* Subtle border to define the block area */
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Hover Effect: Highlight border and background with orange */
+.service-card-item:hover {
+    border-color: #f15106;
+    background-color: #242424; /* Slight background change on hover */
+}
+
+/* Icon Styling */
+.icon-art-placeholder {
+    height: 100px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Basic styling for SVG placeholders */
+.line-art-icon {
+    width: 80px;
+    height: 80px;
+    /* Transition to make the color change smooth on hover */
+    transition: all 0.3s ease-in-out; 
+}
+
+/* SVG paths/elements should inherit color or be specifically targeted for the hover effect */
+.service-card-item:hover .line-art-icon circle,
+.service-card-item:hover .line-art-icon line,
+.service-card-item:hover .line-art-icon polygon,
+.service-card-item:hover .line-art-icon rect {
+    stroke: #f15106; /* Change white lines to orange on hover */
+}
+
+/* Title Styling */
+.card-title {
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Media Query for Tablet/Small Screens */
+@media (max-width: 900px) {
+    .service-cards-grid {
+        /* 2 columns on medium screens */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 550px) {
+    .service-cards-grid {
+        /* 1 column on small screens */
+        grid-template-columns: 1fr;
+    }
+}
+/* service ends here */
+
+
+/* --- Marquee/Ticker Setup --- */
+
+/* Section container style */
+.logo-marquee-section {
+    background-color: #000000; /* Black background matching the image area */
+    padding: 30px 0;
+    overflow: hidden; /* Essential to hide logos outside the view */
+    border-bottom: 1px solid #333; /* Subtle line below the logos */
+}
+
+/* Container for the content track - ensures everything is horizontally aligned */
+.marquee-content-container {
+    width: 100%;
+    display: flex; /* Makes the two logo tracks line up next to each other */
+}
+
+/* The track containing the logos - moves via animation */
+.logo-group-track {
+    display: flex;
+    flex-shrink: 0; /* Prevents shrinking */
+    animation: scroll-left 40s linear infinite; /* Animation definition */
+    padding: 0 20px;
+    align-items: center;
+}
+
+/* Styling for individual logo items */
+.client-logo-item {
+    padding: 0 40px; /* Space between logos */
+    height: 30px; /* Uniform height for alignment */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.client-logo-item img {
+    max-height: 100%;
+    width: auto;
+    filter: invert(100%); /* Makes black logos white on the black background */
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.client-logo-item img:hover {
+    opacity: 1; /* Slight highlight on hover */
+}
+
+/* --- CSS Keyframe Animation --- */
+
+/* Defines the animation: moves the content from its original position (0%) to fully left (-100%) */
+@keyframes scroll-left {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        /* Moves the entire width of the logo-group-track to the left */
+        transform: translateX(-100%); 
+    }
+}
+
+/* Optional: Pause animation on hover */
+.logo-marquee-section:hover .logo-group-track {
+    animation-play-state: paused;
+}
+
+/*Marquee/Ticker Setup*/
+
+/*--industry starts here--*/
+/* Variables for coloring */
+:root {
+    --light-bg: #ffffff;
+    --dark-bg: #1e1e1e; /* Used for the text block in the image */
+    --orange-accent: #f15106; /* Darker orange for the button */
+    --text-dark: #333;
+    --text-light: #fff;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Base Section Styling */
+.dark-content-module {
+    background-color: var(--light-bg);
+    font-family: Arial, sans-serif;
+    display: flex;
+    box-shadow: var(--box-shadow);
+}
+
+/* Left Text Area */
+.carousel-text-area {
+    flex: 0 0 300px; /* Fixed width for the text area */
+    background-color: white; /* Dark background for text block */
+    color: var(--text-light);
+    padding: 30px;
+    border-radius: 10px 0 0 10px;
+}
+
+.sectionss-title-heading {
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.sectionss-description-text {
+    font-size: 0.9em;
+    line-height: 1.4;
+    color: #f15106;
+    margin-bottom: 25px;
+}
+
+.view-all-button {
+    background-color: #f15106;
+    color: var(--text-light);
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.view-all-button:hover {
+    opacity: 0.9;
+}
+
+/* --- Carousel Area --- */
+.carousel-and-controls-wrapper {
+    flex-grow: 1; /* Takes up remaining space */
+    padding: 20px 0;
+    position: relative;
+    overflow: hidden; /* Crucial: hides the overflowing cards */
+    display: flex;
+    flex-direction: column;
+}
+
+.industry-cards-carousel-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* The CSS for the sliding effect */
+    will-change: transform;
+    /* This width needs to be calculated by JS based on card count, but we set a large width for initial view */
+}
+
+.carousel-card-item {
+    flex: 0 0 25%; /* Show 4 cards at a time (100% / 4) */
+    width: 25%;
+    height: 300px; /* Fixed height for the cards */
+    padding: 0 10px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    filter: brightness(0.7);
+}
+
+.card-overlay-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+/* Navigation Controls (Arrows) */
+.carousel-arrow-controls {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.carousel-arrow {
+    background: none;
+    border: 1px solid var(--text-dark);
+    color: var(--text-dark);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    line-height: 1;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.carousel-arrow:hover {
+    background-color: #f15106;
+    color: var(--text-light);
+    border-color: #f15106;
+}
+
+/* Dots Navigation */
+.carousel-navigation-dots {
+    align-self: center; /* Center dots below the carousel */
+    padding-top: 15px;
+}
+
+.dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 4px;
+}
+
+.active-dot {
+    background-color: #f15106;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1000px) {
+    .carousel-card-item {
+        flex: 0 0 33.33%; /* Show 3 cards on smaller desktop */
+        width: 33.33%;
+    }
+}
+
+@media (max-width: 768px) {
+    .dark-content-module {
+        flex-direction: column;
+        border-radius: 10px;
+    }
+
+    .carousel-text-area {
+        flex: 1 1 100%;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .carousel-card-item {
+        flex: 0 0 50%; /* Show 2 cards on tablet */
+        width: 50%;
+    }
+
+    .carousel-arrow-controls {
+        /* Position controls nicely on mobile */
+        position: static;
+        margin-top: 20px;
+        text-align: center;
+    }
+}
+/*--industry ends here*/
+/*--tools starts here*/
+/* Variables for coloring */
+:root {
+    --bg-white: #ffffff;
+    --main-text-color: #333;
+    --secondary-text-color: #666;
+    --primary-accent: #f15106; /* Orange-Red for borders/icons */
+    --secondary-accent-hover: #FFF0E0; /* Light background on hover */
+    --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Base Section Styling */
+.tool-section-wrapper {
+    background-color: var(--bg-white);
+    font-family: Arial, sans-serif;
+    padding: 80px 20px;
+}
+
+.tool-content-area {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Heading and Subtitle */
+.main-tool-heading {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: var(--main-text-color);
+    margin-bottom: 15px;
+}
+
+.tool-subtitle-text {
+    font-size: 1em;
+    color: var(--secondary-text-color);
+    max-width: 900px;
+    margin: 0 auto 50px;
+    line-height: 1.6;
+}
+
+/* --- Tools Grid Layout --- */
+.tools-grid-layout {
+    display: grid;
+    /* 3 columns on large screens */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+}
+
+.tool-card-block {
+    background-color: var(--bg-white);
+    padding: 30px;
+    text-align: left;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid #eee; /* Light border */
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.tool-card-block:hover {
+    background-color: var(--secondary-accent-hover);
+    border-color: #f15106;
+}
+
+/* Icon Styling */
+.tool-icon-circle {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-accent); 
+    border-radius: 50%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 5px rgba(255, 69, 0, 0.1); /* Subtle ring effect */
+}
+
+.icon-symbol {
+    font-size: 1.5em;
+    line-height: 1;
+}
+
+/* Card Title and Description */
+.tool-card-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--main-text-color);
+    margin-bottom: 10px;
+}
+
+.tool-card-description {
+    font-size: 0.9em;
+    color: var(--secondary-text-color);
+    line-height: 1.5;
+}
+
+
+/* Media Query for Tablet/Small Screens */
+@media (max-width: 900px) {
+    .tools-grid-layout {
+        /* 2 columns on medium screens */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 600px) {
+    .tools-grid-layout {
+        /* 1 column on small screens */
+        grid-template-columns: 1fr;
+    }
+}
+/* tools ends here*/
+/* stats boots starts here*/
+/* Variables for Orange Coloring */
+:root {
+    --bg-white: #ffffff;
+    --main-text-color: #333;
+    --secondary-text-color: #666;
+    --primary-orange: #f15106;      /* Dark Orange for accent */
+    --light-orange-bg: #FFF5E6;     /* Light background for stats cards */
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Base Section Styling */
+.stats-data-component {
+    background-color: var(--bg-white); 
+    font-family: Arial, sans-serif;
+    padding: 60px 20px;
+}
+
+.stats-content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    align-items: center; /* Vertically align items */
+}
+
+/* Left Text Block */
+.stats-text-block {
+    flex: 1; 
+    min-width: 350px;
+}
+
+.stats-main-heading {
+    font-size: 2.2em;
+    font-weight: 800;
+    color: var(--main-text-color);
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.stats-description-paragraph {
+    font-size: 0.95em;
+    color: var(--secondary-text-color);
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* Right Statistics Grid */
+.stats-grid-container {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px; /* Padding inside the grid area */
+    background-color: var(--light-orange-bg); /* Light background for the grid area */
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+.stat-card-item {
+    background-color: var(--bg-white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    text-align: center; /* Center the content inside the card */
+}
+
+/* Icon Styling */
+.stat-icon-wrapper {
+    font-size: 2em;
+    color: var(--primary-orange); 
+    margin-bottom: 5px;
+}
+
+/* Statistic Value */
+.stat-value {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--primary-orange); /* Orange color for the large number */
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+/* Statistic Label */
+.stat-label {
+    font-size: 0.9em;
+    color: var(--main-text-color);
+    font-weight: 600;
+}
+
+
+/* Media Query for Mobile/Smaller Screens */
+@media (max-width: 850px) {
+    .stats-content-wrapper {
+        flex-direction: column;
+    }
+
+    .stats-text-block {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .stats-grid-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .stats-grid-container {
+        grid-template-columns: 1fr; /* Stack cards vertically on small phones */
+    }
+}
+/* starts boots ends here*/
+
+/* digital experiences starts here*/
+/* Variables for colors */
+:root {
+    --bg-white: #ffffff;
+    --primary-purple: #5c00b8; /* Dark Purple accent from the header */
+    --light-blue: #f15106; /* Used for the accent line and active state */
+    --main-text-color: #333;
+    --border-color: #ddd;
+}
+
+/* Base Section Styling */
+.content-tabs-section {
+    background-color: white;
+    font-family: Arial, sans-serif;
+    padding: 60px 20px;
+}
+
+.tabs-inner-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* --- Left Vertical Navigation (Tabs) --- */
+.vertical-tabs-nav {
+    flex: 0 0 250px; /* Fixed width for the navigation area */
+    padding-right: 20px;
+    border-right: 1px solid var(--border-color);
+}
+
+.tabs-nav-heading {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: rgb(255, 68, 0); /* Digital Experience Title Color */
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.nav-list-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    margin-bottom: 5px;
+}
+
+.nav-link {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--main-text-color);
+    font-weight: 600;
+    position: relative;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--light-blue);
+    background-color: #f5f5f5;
+}
+
+/* Active/Selected Tab State */
+.nav-item .active {
+    color: var(--light-blue);
+    /* Left border/accent line */
+    border-left: 3px solid var(--light-blue);
+    background-color: #f9f9f9;
+}
+
+/* --- Middle Content Area --- */
+.tabs-content-area {
+    flex: 1; /* Takes up the remaining available space */
+    min-height: 250px; /* Ensure a minimum height */
+    padding-top: 10px;
+}
+
+.content-panel {
+    display: none; /* Hidden by default, JS controls visibility */
+}
+
+.content-panel.active {
+    display: block;
+}
+
+.content-panel-title {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--main-text-color);
+    margin-bottom: 15px;
+}
+
+.content-panel-text {
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: var(--secondary-text-color);
+}
+
+.content-panel-text.main-content {
+    /* Specific styling for the main content block if needed */
+    color: var(--main-text-color);
+}
+
+
+/* --- Right Image Showcase --- */
+.tabs-image-showcase {
+    flex: 0 0 400px; /* Fixed width for the image area */
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.image-wrapper {
+    width: 50%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.image-wrapper.image-1 {
+    margin-top: 40px; /* Move the first image down */
+}
+
+.showcase-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* Media Query for Mobile/Smaller Screens */
+@media (max-width: 992px) {
+    .tabs-inner-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .vertical-tabs-nav {
+        flex: 1;
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .nav-list-links {
+        display: flex; /* Make links horizontal on mobile */
+        justify-content: space-around;
+    }
+
+    .tabs-image-showcase {
+        flex-direction: row;
+        width: 100%;
+        max-width: 500px;
+        margin-top: 20px;
+    }
+}
+/* digital experiences ends here*/
+
+/*process starts here*/
+/* Variables for Orange Coloring */
+:root {
+    --bg-white: #ffffff;
+    --bg-light-gray: #f5f5f5; /* Light background for the overall section */
+    --main-text-color: #333;
+    --primary-orange: #f15106;  /* Dark Orange for accent */
+    --light-orange-border: #f15106; /* Lighter orange for subtle lines */
+}
+
+/* Base Section Styling */
+.process-section-wrapper-orange {
+    background-color: var(--bg-light-gray);
+    font-family: Arial, sans-serif;
+    padding: 60px 20px;
+}
+
+.process-intro-text-area {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+}
+.section-title-heading {
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--main-text-color);
+    margin-bottom: 10px;
+}
+
+.section-description-text {
+    font-size: 1em;
+    color: var(--secondary-text-color);
+    line-height: 1.5;
+}
+
+/* --- Main Process Flow Layout --- */
+.process-flow-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    background-color: var(--bg-white); /* White background for the card */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Left Research Block */
+.research-step-block {
+    flex: 0 0 40%; /* Take 40% of the width */
+    padding-right: 20px;
+    border-right: 1px solid var(--light-orange-border);
+}
+
+.research-icon-wrapper {
+    font-size: 3em;
+    color: var(--primary-orange);
+    margin-bottom: 15px;
+}
+
+.research-step-title {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--main-text-color);
+    margin-bottom: 10px;
+}
+
+.research-step-description {
+    font-size: 0.9em;
+    color: var(--secondary-text-color);
+    line-height: 1.6;
+}
+
+/* Right Step List */
+.step-list-grid {
+    flex: 1; /* Take the remaining 60% of the width */
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}
+
+.process-step-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-bottom: 40px; /* Space between steps */
+}
+
+/* Vertical Line Connector */
+.step-line-vertical {
+    position: absolute;
+    left: 17px; /* Align with center of the circle */
+    top: 40px; /* Start below the circle */
+    height: 100%;
+    width: 2px;
+    background-color: var(--light-orange-border);
+}
+
+.final-step-item .step-line-vertical {
+    display: none; /* Hide line below the final step */
+}
+
+/* Step Number Circle */
+.step-number-circle {
+    width: 35px;
+    height: 35px;
+    background-color: var(--primary-orange);
+    color: var(--bg-white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-right: 20px;
+    flex-shrink: 0; /* Prevents the circle from shrinking */
+    z-index: 2; /* Ensures circle is above the line */
+}
+
+.step-item-title {
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--main-text-color);
+    margin: 0;
+}
+
+
+/* Media Query for Mobile/Smaller Screens */
+@media (max-width: 800px) {
+    .process-flow-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .research-step-block {
+        flex: 1;
+        padding-right: 0;
+        border-right: none;
+        border-bottom: 1px solid var(--light-orange-border);
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+
+    .step-list-grid {
+        padding-left: 0;
+    }
+
+    .process-step-item {
+        padding-bottom: 30px;
+    }
+
+    .step-line-vertical {
+        left: 17px;
+        top: 35px;
+    }
+}
+/*process ends here*/
+
+/*footer starts here*/
+/* Variables for Orange/Dark Theme */
+:root {
+    --bg-dark: #1a1a1a;
+    --text-light: #ffffff;
+    --text-gray: #ccc;
+    --accent-orange: #f15106; /* Dark Orange for buttons/links */
+    --footer-box-bg: #f15106; /* Orange background for the slogan box */
+    --input-bg: #2b2b2b; /* Slightly lighter dark for inputs */
+    --input-border: #444;
+}
+
+/* Base Section */
+.page-end-module {
+    background-color: var(--bg-dark);
+    font-family: Arial, sans-serif;
+    color: var(--text-light);
+    padding-top: 60px;
+}
+
+/* --- Contact & Campaign Area --- */
+.contact-campaign-area {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 80px;
+    display: flex;
+    gap: 40px;
+}
+
+.campaign-info-block {
+    flex: 1;
+}
+
+.campaign-main-title {
+    font-size: 3em;
+    font-weight: 800;
+    color: var(--accent-orange); /* Orange headline */
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.campaign-sub-text {
+    font-size: 1.1em;
+    color: var(--text-gray);
+    margin-bottom: 40px;
+}
+
+.collaborate-link {
+    color: var(--accent-orange);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Contact Details List */
+.contact-details-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-icon-marker {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    color: var(--accent-orange);
+}
+
+.detail-label {
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--text-light);
+}
+
+.detail-value {
+    font-size: 0.9em;
+    color: var(--text-gray);
+}
+
+/* --- Contact Form Block --- */
+.campaign-form-block {
+    flex: 1;
+    max-width: 500px; /* Constrain form width */
+}
+
+.contact-data-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-row-group {
+    display: flex;
+    gap: 15px;
+}
+
+.contact-data-form input,
+.contact-data-form select,
+.contact-data-form textarea {
+    background-color: var(--input-bg);
+    border: 1px solid var(--input-border);
+    color: var(--text-light);
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-data-form select {
+    /* Style placeholder text color for better visibility */
+    color: var(--text-gray); 
+}
+
+.contact-data-form input::placeholder,
+.contact-data-form textarea::placeholder {
+    color: var(--text-gray);
+}
+
+.contact-data-form textarea {
+    resize: vertical;
+}
+
+.submit-campaign-button {
+    background-color: var(--accent-orange); /* Orange button */
+    color: var(--bg-dark); /* Dark text on orange */
+    border: none;
+    padding: 15px 25px;
+    font-weight: bold;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    align-self: flex-start; /* Align button to the left like in the image */
+}
+
+.submit-campaign-button:hover {
+    opacity: 0.9;
+}
+
+/* --- Footer Area --- */
+.site-map-footer-area {
+    border-top: 1px solid var(--input-border);
+    padding-top: 40px;
+    margin-top: 40px;
+}
+
+.footer-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+    padding: 0 20px 40px;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px; /* Minimum width for columns */
+}
+
+/* Slogan Column */
+.slogan-social-col {
+    flex: 1.5; /* Takes slightly more space */
+}
+
+.slogan-box {
+    background-color: var(--footer-box-bg); /* Orange background box */
+    color: var(--bg-dark);
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 300px;
+}
+
+.slogan-text {
+    font-size: 1.5em;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.slogan-subtext {
+    font-size: 0.9em;
+    color: var(--bg-dark);
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: var(--bg-dark);
+    color: var(--footer-box-bg);
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Link Columns */
+.link-group-col {
+    min-width: 150px;
+}
+
+.link-group-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--text-light);
+    margin-bottom: 15px;
+}
+
+.footer-link-list {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-link-list li a {
+    color: var(--text-gray);
+    text-decoration: none;
+    font-size: 0.9em;
+    line-height: 2;
+}
+
+.footer-link-list li a:hover {
+    color: var(--accent-orange);
+}
+
+/* Success Awaits Column */
+.success-awaits-col {
+    min-width: 250px;
+}
+
+.google-review-box {
+    margin-bottom: 15px;
+}
+
+.review-label {
+    font-size: 0.8em;
+    color: var(--text-gray);
+    margin-bottom: 5px;
+}
+
+.rating-stars-row {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.rating-score {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--accent-orange);
+}
+
+.star-rating {
+    color: #f15106; /* Google Star Yellow */
+    font-size: 1.2em;
+}
+
+.google-partner-box .partner-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--text-light);
+    line-height: 1;
+}
+
+.google-partner-box .partner-label {
+    font-size: 0.9em;
+    color: var(--accent-orange);
+    font-weight: bold;
+}
+
+/* Copyright Row */
+.copyright-row {
+    text-align: center;
+    border-top: 1px solid var(--input-border);
+    padding: 15px 20px;
+    margin-top: 20px;
+}
+
+.copyright-row p {
+    font-size: 0.8em;
+    color: var(--text-gray);
+    margin: 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 900px) {
+    .contact-campaign-area {
+        flex-direction: column;
+    }
+
+    .campaign-form-block {
+        max-width: 100%;
+    }
+
+    .footer-wrapper {
+        flex-direction: column;
+    }
+
+    .footer-column {
+        min-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .slogan-box {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .form-row-group {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .contact-data-form input,
+    .contact-data-form select {
+        margin-bottom: 15px;
+    }
+}
+/*footer ends here*/
+
+
