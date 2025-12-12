@@ -128,9 +128,9 @@ img {
     opacity: 1;
     visibility: visible;
 }
-/*.btn-primary {
+.btn-primary {
     display: inline-block;
-    padding: 10px 0px;
+    padding: 10px 10px;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     text-transform: uppercase;
@@ -142,23 +142,25 @@ img {
 }
 .btn-primary:hover {
     background-color: #f15106;
-}*/
-
-
-.engagement-catalyst {
-    background-color: #ffffff; /* Bright green button */
-    color: #000000;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
 }
 
-.engagement-catalyst:hover {
+
+.btns-primary {
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+.btns-primary:hover {
     background-color: #f15106;
 }
+
 /*---header section ends here---*/
 
 /* --- Home Hero Section starts here--- */
