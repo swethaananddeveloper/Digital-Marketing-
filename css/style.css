@@ -2,14 +2,14 @@
 :root {
     --color-dark-main: #030303; /* A deep, dark green/black */
     --color-dark-accent: #000000; /* Slightly lighter for contrast */
-    --color-green-primary: #c75213; /* The vibrant lime green */
+    --color-green-primary: #f15106; /* The vibrant lime green */
     --color-text-light: #f0f0f0;
     --color-text-secondary: #ffffff;
     --color-white: #ffffff;
     --font-header: 'Arial Black', sans-serif;
     --font-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --primary-color: #003366; /* Dark Blue */
-    --accent-color: #a4481b; /* Bright Orange for highlights/CTAs */
+    --accent-color: #f15106; /* Bright Orange for highlights/CTAs */
     --text-color: #333333;
     --light-bg: #f4f7f9; /* Light Gray/Blue background for contrast */
     --white: #ffffff;
@@ -68,7 +68,7 @@ img {
 .logo {
     font-family: var(--font-header);
     font-size: 24px;
-    color: rgb(179, 60, 16);
+    color: #f15106;
 }
 
 .main-nav ul {
@@ -128,7 +128,7 @@ img {
     opacity: 1;
     visibility: visible;
 }
-.btn-primary {
+/*.btn-primary {
     display: inline-block;
     padding: 10px 0px;
     background-color: rgb(255, 255, 255);
@@ -141,7 +141,23 @@ img {
     cursor: pointer;
 }
 .btn-primary:hover {
-    background-color: #91320d;
+    background-color: #f15106;
+}*/
+
+
+.engagement-catalyst {
+    background-color: #ffffff; /* Bright green button */
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.engagement-catalyst:hover {
+    background-color: #f15106;
 }
 /*---header section ends here---*/
 
@@ -163,7 +179,7 @@ img {
 }
 
 .momentum-headline .highlighted {
-    color: #92ff8c; /* Bright green text */
+    color: #f15106; /* Bright green text */
     display: block; /* Forces the highlighted text onto its own line for separation */
     margin: 5px 0;
 }
@@ -177,23 +193,7 @@ img {
     color: #ccc;
 }
 
-/* --- INITIATION GATEWAY (Main CTA) --- */
-.initiation-gateway {
-    display: inline-block;
-    background-color: #92ff8c; /* Bright green button */
-    color: #000;
-    padding: 15px 40px;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.2s;
-}
 
-.initiation-gateway:hover {
-    background-color: #6eff64;
-    transform: translateY(-2px); /* Slight lift on hover */
-}
 
 /* --- Home Hero Section ends here--- */
 
@@ -256,7 +256,7 @@ img {
     border-left: 3px solid var(--color-green-primary);
 }
 .service-item h3 {
-    color: rgb(190, 78, 18);
+    color: #f15106;
     font-size: 20px;
     margin-bottom: 10px;
     text-transform: uppercase;
@@ -428,7 +428,7 @@ img {
     height: 50px;
     line-height: 50px;
     background-color: rgb(0, 0, 0);
-    color: rgb(211, 97, 20);
+    color: #f15106;
     border-radius: 50%;
     font-weight: bold;
     font-size: 20px;
@@ -445,7 +445,7 @@ img {
 
 .process-step p {
     font-size: 13px;
-    color: #96480f;
+    color: #f15106;
 }
 /* --- Our Process Section ends here--- */
 
