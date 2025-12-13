@@ -1,0 +1,250 @@
+/* --- Variables & Global Reset (New Names) --- */
+:root {
+    --page-bg-dark: #1C1C1C; /* Page Background */
+    --content-panel-dark: #252525; /* Section/Widget Background */
+    --main-text-light: #FFFFFF; /* Primary Text/Headlines */
+    --secondary-text-gray: #AAAAAA; /* Secondary/Body Text */
+    --highlight-blue-action: #00BFFF; /* Deep Sky Blue Accent */
+    --divider-line-color: #333333; /* Darker Border Line */
+    --padding-section: 30px;
+    --gap-spacing: 25px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--secondary-text-gray);
+    background-color: var(--page-bg-dark);
+}
+
+a {
+    color: var(--highlight-blue-action);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--main-text-light);
+}
+
+.site-bounds-limit {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Main Layout --- */
+.main-page-wrapper {
+    padding: var(--padding-section) 0;
+}
+
+.primary-content-grid {
+    display: flex;
+    gap: var(--gap-spacing);
+}
+
+.main-article-display {
+    flex: 1; 
+}
+
+.sidebar-info-panel {
+    flex: 0 0 320px; /* Fixed width for the sidebar */
+}
+
+/* --- Hero Banner (Image Placeholder) --- */
+.hero-feature-panel {
+    background-color: var(--content-panel-dark);
+    /* In a real scenario, the image would be set here */
+    background-image: url('placeholder-bg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    min-height: 250px;
+    padding: var(--padding-section);
+    margin-bottom: var(--gap-spacing);
+    border-radius: 4px;
+    /* Dark overlay effect */
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.6); 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.intro-greeting-line, .support-sub-text {
+    color: var(--secondary-text-gray);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.top-headline-text {
+    font-size: 2.5rem;
+    color: var(--main-text-light);
+    margin: 5px 0 10px 0;
+}
+
+/* --- Article Content --- */
+.blog-post-content-area {
+    padding: var(--padding-section);
+    background-color: var(--content-panel-dark);
+    border-radius: 4px;
+}
+
+.content-tag-label, .publication-date-info {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.article-post-title {
+    font-size: 1.8rem;
+    color: var(--main-text-light);
+    margin-bottom: 15px;
+}
+
+.post-sub-heading {
+    font-size: 1.2rem;
+    color: var(--main-text-light);
+    margin: 20px 0 10px 0;
+}
+
+.ordered-steps-list {
+    margin: 15px 0 15px 30px;
+    list-style-type: decimal;
+}
+
+.ordered-steps-list li {
+    margin-bottom: 8px;
+}
+
+.article-bottom-meta {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    margin-top: 20px;
+    border-top: 1px solid var(--divider-line-color);
+    font-size: 0.9rem;
+}
+
+.author-name-text {
+    color: var(--highlight-blue-action);
+}
+
+/* --- Related Articles Gallery --- */
+.related-content-gallery {
+    padding-top: var(--padding-section);
+    margin-top: var(--padding-section);
+}
+
+.gallery-section-title {
+    color: var(--main-text-light);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.card-items-collection {
+    display: flex;
+    gap: var(--gap-spacing);
+    overflow-x: auto; 
+    padding-bottom: 10px;
+}
+
+.thumbnail-blog-card {
+    flex: 0 0 280px;
+    background-color: var(--content-panel-dark);
+    border-radius: 4px;
+    overflow: hidden;
+    padding-bottom: 10px;
+    border: 1px solid var(--divider-line-color);
+}
+
+.image-box-visual {
+    height: 120px;
+    background-color: var(--divider-line-color);
+    margin-bottom: 10px;
+}
+
+.card-main-title {
+    color: var(--main-text-light);
+    font-size: 1rem;
+    padding: 0 10px;
+}
+
+.card-read-more-link {
+    font-size: 0.8rem;
+    padding: 0 10px;
+    margin-top: 5px;
+}
+
+/* --- Sidebar Widgets --- */
+.utility-widget {
+    margin-bottom: var(--gap-spacing);
+    background-color: var(--content-panel-dark);
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.widget-heading-main, .widget-heading-secondary {
+    color: var(--main-text-light);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--divider-line-color);
+    padding-bottom: 10px;
+}
+
+.widget-heading-main {
+    color: var(--highlight-blue-action);
+}
+
+/* Calendar Styling */
+.month-calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.month-calendar-table th, .month-calendar-table td {
+    padding: 5px;
+    border: 1px solid var(--divider-line-color);
+    font-size: 0.85rem;
+}
+
+.month-calendar-table th {
+    color: var(--main-text-light);
+}
+
+.month-calendar-table td {
+    color: var(--secondary-text-gray);
+}
+
+/* Categories Styling */
+.topic-navigation-links {
+    list-style: none;
+}
+
+.topic-navigation-links li {
+    padding: 8px 0;
+    border-bottom: 1px dotted var(--divider-line-color);
+}
+
+.topic-navigation-links a {
+    color: var(--secondary-text-gray);
+}
+
+.topic-navigation-links a:hover {
+    color: var(--highlight-blue-action);
+}
+
+/* --- Footer --- */
+.page-footer-base {
+    background-color: var(--page-bg-dark);
+    padding: 15px 0;
+    border-top: 1px solid var(--divider-line-color);
+    text-align: center;
+    font-size: 0.8rem;
+}
